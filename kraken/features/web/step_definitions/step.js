@@ -93,3 +93,6 @@ When('I enter tag canonical-url {kraken-string}', async function (str) {
     let element = await this.driver.$('#canonical-url');
     return await element.setValue(str);
 });
+Then('I check the execution', function (int) {
+      return 'pending';
+});

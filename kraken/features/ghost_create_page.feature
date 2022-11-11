@@ -21,7 +21,7 @@ And I wait for 1 seconds
 And I click on the button named "Continue, final review →"
 And I wait for 1 seconds
 And I click on the button named "Publish page, right now"
-And I wait for 5 seconds
+Then I wait for 5 seconds
 
 @user2 @web
 Scenario: Create page with custom url
@@ -45,4 +45,4 @@ And I wait for 1 seconds
 And I click on the button named "Continue, final review →"
 And I wait for 1 seconds
 And I click on the button named "Publish page, right now"
-And I wait for 5 seconds
+Then I wait for 5 seconds

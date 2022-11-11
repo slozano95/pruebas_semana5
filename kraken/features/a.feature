@@ -28,4 +28,4 @@ And I click on the link variable "$$string_1"
 And I wait for 1 seconds
 And I click on the button named "Unpublish"
 And I click on the button named "Unpublish and revert to private draft →"
-Then I check the execution
+Then I check the toast contains "Page successfully reverted to a draft."

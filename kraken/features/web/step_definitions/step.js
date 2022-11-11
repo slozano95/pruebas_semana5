@@ -1,5 +1,5 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
-
+const assert = require('assert')
 When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('#ember6');
     return await element.setValue(email);
@@ -93,6 +93,9 @@ When('I enter tag canonical-url {kraken-string}', async function (str) {
     let element = await this.driver.$('#canonical-url');
     return await element.setValue(str);
 });
-Then('I check the execution', function (int) {
-      return 'pending';
-});
+
+Then('I check the toast contains {string}', async function (str) {
+    let value = await this.driver.$('.gh-notifications').getText();
+    console.log("VALUE IS "+value);
+    assert.equal(value,str);
+})

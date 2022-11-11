@@ -12,7 +12,6 @@ When('I enter password {kraken-string}', async function (password) {
 
 When('I click sign in', async function() {
     let element = await this.driver.$('#ember10');
-    
     return await element.click();
 })
 
@@ -50,3 +49,11 @@ When('I type on the keyboard {kraken-string}', async function (str) {
 When('I hit the tab key on the keyboard', async function () {
     await this.driver.keys("Tab");
 })
+When('I click the button with class {string}', async function (str) {
+    let element = await this.driver.$(str);
+    return await element.click();
+});
+When('I write {kraken-string} on the input {string}', async function (str,str2) {
+    let element = await this.driver.$(str2);
+    return await element.setValue(str);
+});

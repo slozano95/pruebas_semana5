@@ -99,3 +99,45 @@ Then('I check the toast contains {string}', async function (str) {
     console.log("VALUE IS "+value);
     assert.equal(value,str);
 })
+
+
+//Page Members
+When('I enter member name {kraken-string}', async function (name) {
+    let element = await this.driver.$('#member-name');
+    return await element.setValue(name);
+});
+
+When('I enter member email {kraken-string}', async function (str) {
+    let element = await this.driver.$('#member-email');
+    return await element.setValue(str);
+});
+
+Then('I see on the message {string}', async function (link) {
+    let elements = await this.driver.$(".response");
+    let flag = false;
+    for(let i=0; i < elements.length; i++ ){
+        if(elements[i].getText() == link){
+            flag = true;
+            assert.equal(elements[i].getText(), link);
+        }
+    }
+});
+
+When('I click on the button delete member named {string}', async function (link) {
+    await this.driver.$("span[class='red']").click();
+});
+
+When('I click on the button confirm delete member named {string}', async function (link) {
+    await this.driver.$("button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
+});
+
+Then('I see on the message incorrect login {string}', async function (link) {
+    let elements = await this.driver.$(".main-error");
+    let flag = false;
+    for(let i=0; i < elements.length; i++ ){
+        if(elements[i].getText() == link){
+            flag = true;
+            assert.equal(elements[i].getText(), link);
+        }
+    }
+});

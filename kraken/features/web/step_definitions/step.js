@@ -50,3 +50,38 @@ When('I type on the keyboard {kraken-string}', async function (str) {
 When('I hit the tab key on the keyboard', async function () {
     await this.driver.keys("Tab");
 })
+
+//Page Tags
+When('I enter tag name {kraken-string}', async function (name) {
+    let element = await this.driver.$('#tag-name');
+    return await element.setValue(name);
+});
+
+When('I enter tag slug {kraken-string}', async function (str) {
+    let element = await this.driver.$('#tag-slug');
+    return await element.setValue(str);
+});
+
+When('I enter tag description {kraken-string}', async function (str) {
+    let element = await this.driver.$('#tag-description');
+    return await element.setValue(str);
+});
+
+When('I click on the link variable {kraken-string}', async function (link) {    
+    await this.driver.$('*='+link).click();// partial link text
+})
+
+When('I enter tag meta-title {kraken-string}', async function (str) {
+    let element = await this.driver.$('#meta-title');
+    return await element.setValue(str);
+});
+
+When('I enter tag meta-description {kraken-string}', async function (str) {
+    let element = await this.driver.$('#meta-description');
+    return await element.setValue(str);
+});
+
+When('I enter tag canonical-url {kraken-string}', async function (str) {
+    let element = await this.driver.$('#canonical-url');
+    return await element.setValue(str);
+});

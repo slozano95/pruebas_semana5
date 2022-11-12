@@ -141,3 +141,23 @@ Then('I see on the message incorrect login {string}', async function (link) {
         }
     }
 });
+
+When('click menu profile', async function () {
+    await this.driver.$(".pe-all > div[role*='button']").click();
+});
+
+When('I contrasena anterior {kraken-string}', async function (str) {
+    let element = await this.driver.$('#user-password-old');
+    return await element.setValue(str);
+});
+
+
+When('I enter user-password-new {kraken-string}', async function (str) {
+    let element = await this.driver.$('#user-password-new');
+    return await element.setValue(str);
+});
+
+When('I enter user-new-password-verification {kraken-string}', async function (str) {
+    let element = await this.driver.$('#user-new-password-verification');
+    return await element.setValue(str);
+});

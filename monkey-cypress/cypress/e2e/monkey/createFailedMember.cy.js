@@ -1,4 +1,4 @@
-describe('Testing Create Member', () => {
+describe('Testing Create Failed Member', () => {
     beforeEach(()=>{
         cy.wait(2000)
     })
@@ -17,10 +17,11 @@ describe('Testing Create Member', () => {
         cy.wait(1000)
         cy.get('form').within(() => {
             cy.get('input[name="name"]').type('Richard')
-            cy.get('input[name="email"]').type('richard@gmail.com')
+            cy.get('input[name="email"]').type('richard')
         })
         cy.get('button > span').contains('Save').click()
         cy.wait(1000)
-        cy.get('a[href*="#/members/"]').contains('Members').click()
+        cy.get('p[class="response"').eq(1).should('contain', 'Invalid Email.')
+        cy.wait(1000)
     })
 })

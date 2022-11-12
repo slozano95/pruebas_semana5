@@ -7,6 +7,9 @@
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
+## Pros y Contras
+[Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
+
 ## Funcionalidades bajo pruebas
 * Funcionalidades Posts
 * Funcionalidades Paginas

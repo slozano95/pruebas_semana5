@@ -1,7 +1,7 @@
 Feature: segfer
 
-@user2 @web
-Scenario: Create page with custom url
+@user3 @web
+Scenario: Delete a page
 Given I navigate to page "http://localhost:2368/ghost/#/signin"
 And I wait for 2 seconds
 When I enter email "<EMAIL>"
@@ -26,6 +26,7 @@ And I click on the button named "Pages"
 And I wait for 1 seconds
 And I click on the link variable "$$string_1"
 And I wait for 1 seconds
-And I click on the button named "Unpublish"
-And I click on the button named "Unpublish and revert to private draft →"
-Then I check the toast contains "Page successfully reverted to a draft."
+And I click the button with class ".settings-menu-toggle"
+And I click on the button named "Delete page"
+And I click on the button named "Delete"
+Then I wait for 1 seconds

@@ -19,6 +19,11 @@
 
 ## Escenarios de pruebas
 ### 1. Escenarios Post
+ * Crear un nuevo post
+ * Editar un post
+ * Eliminar un post
+ * Publicar un post
+ * Despublicar un post
 ### 2. Escenarios Paginas
 ### 3. Escenarios Tags
  * Crear un nuevo tag
@@ -32,6 +37,12 @@
 ## Acceso Script de pruebas por Herramienta
 ## Cypress
 ### 1. Escenarios Post
+ * [Crear un nuevo post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/createPost.cy.js)
+ * [Editar un post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/editPost.cy.js)
+ * [Eliminar un post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/deletePost.cy.js)
+ * [Publicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/publishPost.cy.js)
+ * [Despublicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/unpublishPost.cy.js)
+
 ### 2. Escenarios Paginas
 ### 3. Escenarios Tags
  * [Crear un nuevo tag](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/ghost_create_tag.cy.js)
@@ -41,9 +52,16 @@
  * [Editar tag con un nombre largo](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/ghost_edit_tag_long_name.cy.js)
 ### 4. Escenarios Miembros
 ### 5. Escenarios Login
+ * [Usuario incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_user_incorrect.feature)
 
 ## Kraken
 ### 1. Escenarios Post
+ * [Crear un nuevo post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_post.feature)
+ * [Editar un post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/ghost_edit_tag.cy.js)
+ * [Eliminar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_delete_post.feature)
+ * [Publicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_publish_post.feature)
+ * [Despublicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_unpublish_post.feature)
+
 ### 2. Escenarios Paginas
 ### 3. Escenarios Tags
  * [Crear un nuevo tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_tag.feature)
@@ -53,3 +71,4 @@
  * [Editar tag con un nombre largo](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_tag_long_name.feature)
 ### 4. Escenarios Miembros
 ### 5. Escenarios Login
+ * [Usuario incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_user_incorrect.feature)

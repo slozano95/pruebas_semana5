@@ -1,7 +1,7 @@
 Feature: Editar Tag
 
 @user1 @web
-Scenario: Create page with common data
+Scenario: Edita un Tag with common data
 
 Given I navigate to page "http://localhost:2368/ghost/#/signin"
 And I wait for 2 seconds

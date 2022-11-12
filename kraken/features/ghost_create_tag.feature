@@ -1,7 +1,7 @@
-Feature: Create Page
+Feature: Create Tags
 
 @user1 @web
-Scenario: Create page with common data
+Scenario: Create Tags with common data
 //Login first
 Given I navigate to page "http://localhost:2368/ghost/#/signin"
 And I wait for 2 seconds

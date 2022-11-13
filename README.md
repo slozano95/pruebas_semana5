@@ -32,7 +32,13 @@
  * Editar meta data de un tag
  * Editar tag con un nombre largo
 ### 4. Escenarios Miembros
+ * Crear un nuevo Miembro
+ * Crear un Miembro incorrecto
+ * Editar un Miembro
+ * Eliminar un Miembro
 ### 5. Escenarios Login
+ * Usuario incorrecto
+ * Password incorrecta 
 
 ## Acceso Script de pruebas por Herramienta
 ## Cypress
@@ -70,5 +76,10 @@
  * [Editar meta data de un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_meta_data_tag.feature)
  * [Editar tag con un nombre largo](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_tag_long_name.feature)
 ### 4. Escenarios Miembros
+ * [Crear un nuevo Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_MEMBER.feature)
+ * [Crear un Miembro incorrecto] (https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_incorrect_MEMBER.feature)
+ * [Editar un Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_MEMBER.feature)
+ * [Eliminar un Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_delete_MEMBER.feature)
+
 ### 5. Escenarios Login
  * [Usuario incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_user_incorrect.feature)

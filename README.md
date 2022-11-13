@@ -25,6 +25,9 @@
  * Publicar un post
  * Despublicar un post
 ### 2. Escenarios Paginas
+* Crear un nuevo pagina
+* Editar un pagina
+* Eliminar un pagina
 ### 3. Escenarios Tags
  * Crear un nuevo tag
  * Editar un tag
@@ -50,6 +53,7 @@
  * [Despublicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/unpublishPost.cy.js)
 
 ### 2. Escenarios Paginas
+* [5 escenarios](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/page-feature.js)
 ### 3. Escenarios Tags
  * [Crear un nuevo tag](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/ghost_create_tag.cy.js)
  * [Editar un tag](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/ghost_edit_tag.cy.js)
@@ -76,6 +80,7 @@
  * [Despublicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_unpublish_post.feature)
 
 ### 2. Escenarios Paginas
+* [5 escenarios](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_page.feature)
 ### 3. Escenarios Tags
  * [Crear un nuevo tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_tag.feature)
  * [Editar un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_tag.feature)

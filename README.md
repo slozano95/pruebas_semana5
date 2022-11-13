@@ -65,6 +65,7 @@
 ### 5. Escenarios Login
  * [Usuario incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_user_incorrect.feature)
  * [Password incorrecta](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/loginFailedIncorrectPassword.cy.js)
+ * [Cambiar Contraseña](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/ghost_change_password.cy.js)
 
 ## Kraken
 ### 1. Escenarios Post
@@ -90,3 +91,4 @@
 ### 5. Escenarios Login
  * [Usuario incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_user_incorrect.feature)
  * [Password incorrecta](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_password_incorrect_R.feature)
+ * [Cambiar Contraseña](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_change_password.feature)

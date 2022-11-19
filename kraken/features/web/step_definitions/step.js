@@ -29,20 +29,23 @@ When('I click sign in {kraken-string} {kraken-string} {kraken-string} {kraken-st
 //  Feature Members
 // ------------------
 
-When('I enter member name {kraken-string}', async function (name) {
+When('I enter member name {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (name, version, feature, escenario, name1) {
     let element = await this.driver.$('#member-name');
     await element.setValue(name);
-    this.driver.saveScreenshot('../screenshots/screenshot.png');
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name1 + '.png');
     return await element;
 });
 
-When('I enter member email {kraken-string}', async function (str) {
+When('I enter member email {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$('#member-email');
-    return await element.setValue(str);
+    await element.setValue(str);
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');    
+    return await element;
 });
 
-Then('I see on the message {string}', async function (link) {
+Then('I see on the message {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
     let elements = await this.driver.$(".response");
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');    
     let flag = false;
     for(let i=0; i < elements.length; i++ ){
         if(elements[i].getText() == link){
@@ -165,13 +168,18 @@ When('I click on the pages links', async function() {
     let element = await this.driver.$('#ember73');
     return await element.click();
 })
-When('I click on the link named {string}', async function (link) {
-    // await this.driver.$('='+link).click();//link text
-    await this.driver.$('*='+link).click();// partial link text
+
+When('I click on the link named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) { 
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    await this.driver.$('*='+link).click();
 })
-When('I click on the button named {string}', async function (link) {
+
+//Revisar Crear miembro Incorrect
+When('I click on the button named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$('span*='+link).click();
 })
+
 When('I type on the keyboard {kraken-string}', async function (str) {
     await this.driver.keys(str)
     

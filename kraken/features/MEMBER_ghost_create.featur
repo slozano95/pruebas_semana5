@@ -1,9 +1,9 @@
-Feature: Delete Member
+Feature: Create Member
 
 @user1 @web
-Scenario: Delete Member with common data
-
-Given I navigate to page "http://localhost:2368/ghost/#/signin"
+Scenario: Create member with common data
+//Given
+Given I navigate to page "<URL>"
 And I wait for 2 seconds
 When I enter email "<EMAIL>"
 And I enter password "<PWD>"
@@ -21,15 +21,5 @@ And I wait for 1 seconds
 And I click on the button named "Save"
 And I wait for 1 seconds
 And I click on the link named "Members"
-Then I wait for 2 seconds
 
-And I click on the link variable "$$name_1"
-And I wait for 1 seconds
-And I click on the button named "Delete member"
-And I wait for 1 seconds
-And I click on the button delete member named "Delete member"
-And I wait for 1 seconds
-And I click on the button confirm delete member named "Delete member"
-And I wait for 1 seconds
-And I click on the link named "Members"
 Then I wait for 5 seconds

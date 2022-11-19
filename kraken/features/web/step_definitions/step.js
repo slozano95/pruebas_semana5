@@ -5,18 +5,23 @@ const assert = require('assert')
 //  Login
 // ------------------
 
-When('I enter email {kraken-string}', async function (email) {
+When('I enter email {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (email, version, feature, escenario, name) {
     let element = await this.driver.$("input[name='identification']");
-    return await element.setValue(email);
+    await element.setValue(email);
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
 
-When('I enter password {kraken-string}', async function (password) {
+When('I enter password {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (password, version, feature, escenario, name) {
     let element = await this.driver.$("input[name='password']");
-    return await element.setValue(password);
+    await element.setValue(password);
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
 
-When('I click sign in', async function() {
+When('I click sign in {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function(version, feature, escenario, name) {
     let element = await this.driver.$("button[type='submit']");
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     return await element.click();
 })
 
@@ -26,7 +31,7 @@ When('I click sign in', async function() {
 
 When('I enter member name {kraken-string}', async function (name) {
     let element = await this.driver.$('#member-name');
-    element.setValue(name);
+    await element.setValue(name);
     this.driver.saveScreenshot('../screenshots/screenshot.png');
     return await element;
 });

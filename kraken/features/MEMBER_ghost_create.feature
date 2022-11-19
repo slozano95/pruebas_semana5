@@ -5,9 +5,11 @@ Scenario: Create member with common data
 //Given
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>"
-And I enter password "<PWD>"
-And I click sign in
+When I enter email "<EMAIL>" "Version 5.22.10" "Member" "Create Member" "IngresarEmail"
+And I wait for 1 seconds
+And I enter password "<PWD>" "Version 5.22.10" "Member" "Create Member" "IngresarPassword"
+And I wait for 1 seconds
+And I click sign in "Version 5.22.10" "Member" "Create Member" "ClickLogin"
 And I wait for 2 seconds
 
 And I click on the link named "Members"

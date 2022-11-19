@@ -26,7 +26,9 @@ When('I click sign in', async function() {
 
 When('I enter member name {kraken-string}', async function (name) {
     let element = await this.driver.$('#member-name');
-    return await element.setValue(name);
+    element.setValue(name);
+    this.driver.saveScreenshot('../screenshots/screenshot.png');
+    return await element;
 });
 
 When('I enter member email {kraken-string}', async function (str) {
@@ -46,6 +48,7 @@ Then('I see on the message {string}', async function (link) {
 });
 
 When('I click on the button delete member named {string}', async function (link) {
+    this.driver.saveScreenshot('../screenshots/screenshot.png')
     await this.driver.$("span[class='red']").click();
 });
 
@@ -140,6 +143,7 @@ When('I hit the tab key on the keyboard', async function () {
 When('I click on the button confirm delete post named {string}', async function (link) {
     await this.driver.$(".modal-footer > button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
 });
+
 
 
 

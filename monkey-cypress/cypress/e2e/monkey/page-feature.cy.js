@@ -6,10 +6,11 @@ const url = Cypress.config('baseUrl') || "https://pruebasautomatizadas.digitalpr
 var feature = "";
 var functionality = "Page";
 var count = 1;
+var escenario = "Page";
 var version = "5.22.10";
 function ss(action) {
     count += 1;
-    cy.screenshot('/'+version+'/'+functionality+'/'+feature+'/'+count+"_"+action)
+    cy.screenshot('/'+version+'/'+functionality+'/'+feature+'/'+escenario+'/'+'/'+count+"_"+action)
 }
 
 function login() {
@@ -89,6 +90,7 @@ Cypress.on('uncaught:exception', (err)=>{
     cy.task('genericReport', {'html': `<p><strong>Uncaught exception: </strong>${err}</p>`});
     return false
 });
+
 describe( `Ghost is under smarter monkeys`, function() {
     //Listeners
     cy.on('uncaught:exception', (err)=>{

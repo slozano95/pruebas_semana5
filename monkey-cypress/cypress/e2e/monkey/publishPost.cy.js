@@ -48,15 +48,16 @@ describe('Testing Publish Post', () => {
 
         cy.get('button[type="button"]').contains('Continue, final review →').click()
         ss("clickOnLinkPublishContinue")
-        cy.wait(200)
+        cy.wait(20)
+
+        cy.get('div[class="gh-publish-cta"]').contains('Publish & send, right now').click()
+        ss("clickOnLinkPublishPost")
+        cy.wait(20)
 
         cy.get('div[class="gh-publish-cta"]').contains('Publishing & sending').click()
-        ss("clickOnLinkPublishPost")
+        ss("clickOnLinkPublishPostConfirmado")
         cy.wait(200)
-
-
     })
-
     })
 
    

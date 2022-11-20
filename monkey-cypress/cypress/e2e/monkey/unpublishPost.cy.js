@@ -66,12 +66,6 @@ describe('Testing UnPublish Post', () => {
         ss("clickOnLinkUnpublishConfirmacion")
         cy.wait(20)
 
-
-
-
-
-
-
     })
 
     })

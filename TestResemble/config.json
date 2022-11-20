@@ -1,5 +1,6 @@
 {
     "url":"https://monitor177.github.io/color-palette/",
+    "titulo":"Ghost",
     "browsers":["chromium"],
     "versionBefore":"../screenshots/Version 5.22.10",
     "versionAfter":"../screenshots/Version 3.42",

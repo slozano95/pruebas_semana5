@@ -3,7 +3,7 @@ const compareImages = require("resemblejs/compareImages")
 const config = require("./config.json");
 const fs = require('fs');
 
-const { viewportHeight, viewportWidth, browsers, options, versionBefore, versionAfter } = config;
+const { viewportHeight, viewportWidth, browsers, options, versionBefore, versionAfter, titulo } = config;
 
 async function executeTest(){
     if(browsers.length === 0){
@@ -58,7 +58,8 @@ async function executeTest(){
             analysisTime: data.analysisTime,
             nombreArchivoBefore: nombreArchivoBefore,
             nombreArchivoAfter: nombreArchivoAfter,
-            nombreArchivoCompare: nombreArchivoCompare
+            nombreArchivoCompare: nombreArchivoCompare,
+            nombrePaso: nombreArchivo[0]
         }
 
         imageArray.push(newData);
@@ -84,15 +85,16 @@ function browser(b, info){
   var cabeceraHtml = `<div class=" browser" id="test0">`
   var cierreHtml = `</div>`
   var titulo = `<div class=" btitle">
-                  <h2>Browser: ${b}</h2>
+                  <h2>Escenario: ${b}</h2>
                 </div> `
   var acumula = "";
   var contador = 0;
   for(item of info){
     
     var htmlBloque =  `<div class=" browser" id="imagen${contador}">
+    <div><h3>${item.nombrePaso}</h3></div>
     <div class=" btitleData">
-        <h3>Resultado comparación</h3>               
+        <h4>Resultado comparación</h4>               
           <table class="demo">	
 	<thead>
 	<tr>
@@ -107,7 +109,7 @@ function browser(b, info){
 <td>${item.isSameDimensions}</td>
 <td>Ancho: ${item.dimensionDifference.width}<br>Alto: ${item.dimensionDifference.height}</td>
 <td>${item.misMatchPercentage}%</td>
-<td>${item.analysisTime}s</td>
+<td>${item.analysisTime}ms</td>
 </tr>
 </tbody>
 </table>
@@ -121,8 +123,6 @@ function browser(b, info){
         <span class="imgname">Test</span>
         <img class="img2" src="${item.nombreArchivoAfter}" id="testImage" label="Test">
       </div>
-    </div>
-    <div class="imgline">
       <div class="imgcontainer">
         <span class="imgname">Diff</span>
         <img class="imgfull" src="${item.nombreArchivoCompare}" id="diffImage" label="Diff">
@@ -146,8 +146,7 @@ function createReport(datetime, resInfo){
             <link href="index.css" type="text/css" rel="stylesheet">
         </head>
         <body>
-            <h1>Report for 
-                 <a href="${config.url}"> ${config.url}</a>
+            <h1>Report for ${titulo}
             </h1>
             <p>Executed: ${datetime}</p>
             <div id="visualizer">

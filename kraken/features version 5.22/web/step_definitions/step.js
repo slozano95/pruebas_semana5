@@ -172,29 +172,6 @@ When('I click on the button confirm delete post named {kraken-string} {kraken-st
     await this.driver.$(".modal-footer > button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
 });
 
-
-When('I click the button named delete settings {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
-    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
-    await this.driver.$("section > button[title='Settings']").click();
-});
-
-When('I click on the button named publish confirm {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
-    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
-    await this.driver.$("footer > button[class='gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view'] > span").click();
-});
-
-When('I click on the button named delete post {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
-    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
-    await this.driver.$("form > button[class='gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button'] > span").click();
-});
-
-When('I click on the button named valid {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
-    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
-    await this.driver.$('*='+link).click();
-});
-
-
-
 // ------------------
 //  Feature Tags
 // ------------------
@@ -218,12 +195,6 @@ When('I click on the button named {string} {kraken-string} {kraken-string} {krak
 When('I type on the keyboard {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str,version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.keys(str)
-});
-
-When('I type on the keyboard name post {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
-    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
-    let element = await this.driver.$("textarea[placeholder='Post Title'");
-    await element.click();
 });
 
 When('I click the button with class {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {

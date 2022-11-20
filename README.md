@@ -14,8 +14,6 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
  |  **PRO** Facilidad de generar reportes, los genera en formato estandar HTML | **CONTRA** Implementación más larga
  | **PRO** Utilización de escenarios | **CONTRA** No los incluye por defecto |
  |**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
- |** CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |** CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
- |** CONTRA** No se tiene en cuenta contexto alguno|** CONTRA** No se tiene en cuenta contexto alguno|
  |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
  |**CONTRA** No se tiene en cuenta contexto alguno|**CONTRA** No se tiene en cuenta contexto alguno|
  

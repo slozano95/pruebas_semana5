@@ -23,7 +23,19 @@ When('I click sign in {kraken-string} {kraken-string} {kraken-string} {kraken-st
     let element = await this.driver.$("button[type='submit']");
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     return await element.click();
-})
+});
+
+Then('I see on the message incorrect login {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
+    let elements = await this.driver.$(".main-error");
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');    
+    let flag = false;
+    for(let i=0; i < elements.length; i++ ){
+        if(elements[i].getText() == link){
+            flag = true;
+            assert.equal(elements[i].getText(), link);
+        }
+    }
+});
 
 // ------------------
 //  Feature Members
@@ -39,7 +51,7 @@ When('I enter member name {kraken-string} {kraken-string} {kraken-string} {krake
 When('I enter member email {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$('#member-email');
     await element.setValue(str);
-    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');    
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
     return await element;
 });
 
@@ -61,7 +73,7 @@ When('I click on the button delete member named {string} {kraken-string} {kraken
 });
 
 When('I click on the button confirm delete member named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
-    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');    
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$("button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
 });
 
@@ -69,39 +81,51 @@ When('I click on the button confirm delete member named {string} {kraken-string}
 //  Feature Tags
 // ------------------
 
-When('I enter tag name {kraken-string}', async function (name) {
+When('I enter tag name {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (name, version, feature, escenario, name1) {
     let element = await this.driver.$('#tag-name');
-    return await element.setValue(name);
+    element.setValue(name);
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name1 + '.png');
+    return await element;
 });
 
-When('I enter tag slug {kraken-string}', async function (str) {
+When('I enter tag slug {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$('#tag-slug');
-    return await element.setValue(str);
+    element.setValue(str);
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
 
-When('I enter tag description {kraken-string}', async function (str) {
+When('I enter tag description {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$('#tag-description');
-    return await element.setValue(str);
+    element.setValue(str);
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
 
 When('I click on the link variable {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {    
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png'); 
-    await this.driver.$('*='+link).click();// partial link text
+    await this.driver.$('*='+link).click();
 })
 
-When('I enter tag meta-title {kraken-string}', async function (str) {
+When('I enter tag meta-title {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$('#meta-title');
-    return await element.setValue(str);
+    element.setValue(str);
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
 
-When('I enter tag meta-description {kraken-string}', async function (str) {
+When('I enter tag meta-description {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$('#meta-description');
-    return await element.setValue(str);
+    element.setValue(str);
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
 
-When('I enter tag canonical-url {kraken-string}', async function (str) {
+When('I enter tag canonical-url {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$('#canonical-url');
-    return await element.setValue(str);
+    element.setValue(str);
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
 
 Then('I click on the first conversation', async function () {
@@ -112,14 +136,15 @@ Then('I click on the first conversation', async function () {
 Then('I click on the redact message inputbox', async function () {
     let element = await this.driver.$('p.xat24cr');
     return await element.click();
-  });
+});
 
 Then('I send the message', async function () {
     let element = await this.driver.$('span.x3nfvp2:nth-child(3)');
     return await element.click();
 });
 
-When('I click on the button confirm delete tag named {string}', async function (link) {
+When('I click on the button confirm delete tag named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$(".modal-footer > button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
 });
 
@@ -130,46 +155,28 @@ When('I click on the button confirm delete tag named {string}', async function (
 When('I click in new post {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {    
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png'); 
     await this.driver.$('*='+link).click();
-})
+});
 
 When('I click on the button post named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$('span*='+link).click();
-})
-
-Then('I see on the message incorrect user {string}', async function (link) {
-    let elements = await this.driver.$(".main-error");
-    let flag = false;
-    for(let i=0; i < elements.length; i++ ){
-        if(elements[i].getText() == link){
-            flag = true;
-            assert.equal(elements[i].getText(), link);
-        }
-    }
 });
 
 When('I hit the tab key on the keyboard {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.keys("Tab");
-})
+});
 
 When('I click on the button confirm delete post named {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$(".modal-footer > button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
 });
 
+// ------------------
+//  Feature Tags
+// ------------------
 
 
-
-
-
-
-
-
-
-
-
-//Pages related
 When('I click on the pages links', async function() {
     let element = await this.driver.$('#ember73');
     return await element.click();
@@ -180,7 +187,6 @@ When('I click on the link named {string} {kraken-string} {kraken-string} {kraken
     await this.driver.$('*='+link).click();
 })
 
-//Revisar Crear miembro Incorrect
 When('I click on the button named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$('span*='+link).click();
@@ -229,15 +235,4 @@ When('I enter user-password-new {kraken-string}', async function (str) {
 When('I enter user-new-password-verification {kraken-string}', async function (str) {
     let element = await this.driver.$('#user-new-password-verification');
     return await element.setValue(str);
-});
-
-Then('I see on the message incorrect login {string}', async function (link) {
-    let elements = await this.driver.$(".main-error");
-    let flag = false;
-    for(let i=0; i < elements.length; i++ ){
-        if(elements[i].getText() == link){
-            flag = true;
-            assert.equal(elements[i].getText(), link);
-        }
-    }
 });

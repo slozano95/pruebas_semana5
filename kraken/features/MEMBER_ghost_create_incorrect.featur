@@ -5,25 +5,25 @@ Scenario: Create member with common data
 //Given
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>" "Version 5.22.10" "Member" "CreateMemberIncorrect" "IngresarEmail"
+When I enter email "<EMAIL>" "Version 5.22.10" "Member" "CreateMemberIncorrect" "1_IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>" "Version 5.22.10" "Member" "CreateMemberIncorrect" "IngresarContrasena"
+And I enter password "<PWD>" "Version 5.22.10" "Member" "CreateMemberIncorrect" "2_IngresarContrasena"
 And I wait for 1 seconds
-And I click sign in "Version 5.22.10" "Member" "CreateMemberIncorrect" "ClickLogin"
+And I click sign in "Version 5.22.10" "Member" "CreateMemberIncorrect" "3_ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Members" "Version 5.22.10" "Member" "CreateMemberIncorrect" "ClickMiembros" 
+And I click on the link named "Members" "Version 5.22.10" "Member" "CreateMemberIncorrect" "4_ClickMiembros" 
 And I wait for 1 seconds
-And I click on the link named "New member" "Version 5.22.10" "Member" "CreateMemberIncorrect" "ClickNuevo"
+And I click on the link named "New member" "Version 5.22.10" "Member" "CreateMemberIncorrect" "5_ClickNuevo"
 And I wait for 1 seconds
-And I enter member name "$name_1" "Version 5.22.10" "Member" "CreateMemberIncorrect" "IngresarNombre"
+And I enter member name "$name_1" "Version 5.22.10" "Member" "CreateMemberIncorrect" "6_IngresarNombre"
 And I wait for 1 seconds
-And I enter member email "$name_1" "Version 5.22.10" "Member" "CreateMemberIncorrect" "IngresarEmailMiembro"
+And I enter member email "$name_1" "Version 5.22.10" "Member" "CreateMemberIncorrect" "7_IngresarEmailMiembro"
 And I wait for 1 seconds
-And I click on the button named "Save" "Version 5.22.10" "Member" "CreateMemberIncorrect" "ClickGuardar"
+And I click on the button named "Save" "Version 5.22.10" "Member" "CreateMemberIncorrect" "8_ClickGuardar"
 And I wait for 1 seconds
-And I see on the message "Invalid Email." "Version 5.22.10" "Member" "CreateMemberIncorrect" "VerMensaje"
+And I see on the message "Invalid Email." "Version 5.22.10" "Member" "CreateMemberIncorrect" "9_VerMensaje"
 And I wait for 1 seconds
-And I click on the link named "Members" "Version 5.22.10" "Member" "CreateMemberIncorrect" "ClickNombreMiembro"
+And I click on the link named "Members" "Version 5.22.10" "Member" "CreateMemberIncorrect" "10_ClickNombreMiembro"
 
 Then I wait for 5 seconds

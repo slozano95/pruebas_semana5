@@ -5,31 +5,31 @@ Scenario: Edit member with different name
 //Login first
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>" "Version 5.22.10" "Member" "EditMember" "IngresarEmail"
+When I enter email "<EMAIL>" "Version 5.22.10" "Member" "EditMember" "1_IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>" "Version 5.22.10" "Member" "EditMember" "IngresarContrasena"
+And I enter password "<PWD>" "Version 5.22.10" "Member" "EditMember" "2_IngresarContrasena"
 And I wait for 1 seconds
-And I click sign in "Version 5.22.10" "Member" "EditMember" "ClickLogin"
+And I click sign in "Version 5.22.10" "Member" "EditMember" "3_ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Members" "Version 5.22.10" "Member" "EditMember" "ClickMiembros" 
+And I click on the link named "Members" "Version 5.22.10" "Member" "EditMember" "4_ClickMiembros" 
 And I wait for 1 seconds
-And I click on the link named "New member" "Version 5.22.10" "Member" "EditMember" "ClickNuevo"
+And I click on the link named "New member" "Version 5.22.10" "Member" "EditMember" "5_ClickNuevo"
 And I wait for 1 seconds
-And I enter member name "$name_1" "Version 5.22.10" "Member" "EditMember" "IngresarNombre"
+And I enter member name "$name_1" "Version 5.22.10" "Member" "EditMember" "5_IngresarNombre"
 And I wait for 1 seconds
-And I enter member email "$email_1" "Version 5.22.10" "Member" "EditMember" "IngresarEmailMiembro"
+And I enter member email "$email_1" "Version 5.22.10" "Member" "EditMember" "6_IngresarEmailMiembro"
 And I wait for 1 seconds
-And I click on the button named "Save" "Version 5.22.10" "Member" "EditMember" "ClickGuardar"
+And I click on the button named "Save" "Version 5.22.10" "Member" "EditMember" "7_ClickGuardar"
 And I wait for 1 seconds
-And I click on the link named "Members" "Version 5.22.10" "Member" "EditMember" "ClickMiembrosValidacion" 
+And I click on the link named "Members" "Version 5.22.10" "Member" "EditMember" "8_ClickMiembrosValidacion" 
 Then I wait for 2 seconds
 
-And I click on the link variable "$$name_1" "Version 5.22.10" "Member" "EditMember" "ClickVariable" 
+And I click on the link variable "$$name_1" "Version 5.22.10" "Member" "EditMember" "9_ClickVariable" 
 And I wait for 1 seconds
-And I enter member name "$name_2" "Version 5.22.10" "Member" "EditMember" "IngresarNombreEditar"
+And I enter member name "$name_2" "Version 5.22.10" "Member" "EditMember" "10_IngresarNombreEditar"
 And I wait for 1 seconds
-And I click on the button named "Save" "Version 5.22.10" "Member" "EditMember" "ClickGuardarEditar"
+And I click on the button named "Save" "Version 5.22.10" "Member" "EditMember" "11_ClickGuardarEditar"
 And I wait for 1 seconds
-And I click on the link named "Members" "Version 5.22.10" "Member" "EditMember" "ClickValidar"
+And I click on the link named "Members" "Version 5.22.10" "Member" "EditMember" "12_ClickValidar"
 Then I wait for 5 seconds

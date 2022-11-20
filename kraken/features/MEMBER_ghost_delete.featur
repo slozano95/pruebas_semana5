@@ -5,34 +5,34 @@ Scenario: Delete Member with common data
 
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>" "Version 5.22.10" "Member" "DeleteMember" "IngresarEmail"
+When I enter email "<EMAIL>" "Version 5.22.10" "Member" "DeleteMember" "1_IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>" "Version 5.22.10" "Member" "DeleteMember" "IngresarContrasena"
+And I enter password "<PWD>" "Version 5.22.10" "Member" "DeleteMember" "2_IngresarContrasena"
 And I wait for 1 seconds
-And I click sign in "Version 5.22.10" "Member" "DeleteMember" "ClickLogin"
+And I click sign in "Version 5.22.10" "Member" "DeleteMember" "3_ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Members" "Version 5.22.10" "Member" "DeleteMember" "ClickMiembros" 
+And I click on the link named "Members" "Version 5.22.10" "Member" "DeleteMember" "4_ClickMiembros" 
 And I wait for 1 seconds
-And I click on the link named "New member" "Version 5.22.10" "Member" "DeleteMember" "ClickNuevo"
+And I click on the link named "New member" "Version 5.22.10" "Member" "DeleteMember" "5_ClickNuevo"
 And I wait for 1 seconds
-And I enter member name "$name_1" "Version 5.22.10" "Member" "DeleteMember" "IngresarNombre"
+And I enter member name "$name_1" "Version 5.22.10" "Member" "DeleteMember" "6_IngresarNombre"
 And I wait for 1 seconds
-And I enter member email "$email_1" "Version 5.22.10" "Member" "DeleteMember" "IngresarEmailMiembro"
+And I enter member email "$email_1" "Version 5.22.10" "Member" "DeleteMember" "7_IngresarEmailMiembro"
 And I wait for 1 seconds
-And I click on the button named "Save" "Version 5.22.10" "Member" "DeleteMember" "ClickGuardar"
+And I click on the button named "Save" "Version 5.22.10" "Member" "DeleteMember" "8_ClickGuardar"
 And I wait for 1 seconds
-And I click on the link named "Members" "Version 5.22.10" "Member" "DeleteMember" "ClickMiembrosValidacion" 
+And I click on the link named "Members" "Version 5.22.10" "Member" "DeleteMember" "9_ClickMiembrosValidacion" 
 Then I wait for 2 seconds
 
-And I click on the link variable "$$name_1" "Version 5.22.10" "Member" "DeleteMember" "ClickVariable" 
+And I click on the link variable "$$name_1" "Version 5.22.10" "Member" "DeleteMember" "10_ClickVariable" 
 And I wait for 1 seconds
-And I click on the button named "Delete member" "Version 5.22.10" "Member" "DeleteMember" "ClickEliminar"
+And I click on the button named "Delete member" "Version 5.22.10" "Member" "DeleteMember" "11_ClickEliminar"
 And I wait for 1 seconds
-And I click on the button delete member named "Delete member" "Version 5.22.10" "Member" "DeleteMember" "ClickEliminarM"
+And I click on the button delete member named "Delete member" "Version 5.22.10" "Member" "DeleteMember" "12_ClickEliminarM"
 And I wait for 1 seconds
-And I click on the button confirm delete member named "Delete member" "Version 5.22.10" "Member" "DeleteMember" "ClickEliminarMe"
+And I click on the button confirm delete member named "Delete member" "Version 5.22.10" "Member" "DeleteMember" "13_ClickEliminarMe"
 And I wait for 1 seconds
-And I click on the link named "Members" "Version 5.22.10" "Member" "DeleteMember" "ClickMiembrosValidacionM"
+And I click on the link named "Members" "Version 5.22.10" "Member" "DeleteMember" "14_ClickMiembrosValidacionM"
 
 Then I wait for 5 seconds

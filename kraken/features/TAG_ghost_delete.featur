@@ -5,32 +5,33 @@ Scenario: Delete tag with common data
 
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>"
+When I enter email "<EMAIL>" "Version 5.22.10" "Tags" "DeleteTag" "1_IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>"
-And I click sign in
+And I enter password "<PWD>" "Version 5.22.10" "Tags" "DeleteTag" "2_IngresarContrasena"
+And I wait for 1 seconds
+And I click sign in "Version 5.22.10" "Tags" "DeleteTag" "3_ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Tags"
+And I click on the link named "Tags" "Version 5.22.10" "Tags" "DeleteTag" "4_ClickTags"
 And I wait for 1 seconds
-And I click on the link named "New tag"
+And I click on the link named "New tag" "Version 5.22.10" "Tags" "DeleteTag" "5_ClickNewTag"
 And I wait for 1 seconds
-And I enter tag name "$name_1"
+And I enter tag name "$name_1" "Version 5.22.10" "Tags" "DeleteTag" "6_IngresarNombreTag"
 And I wait for 1 seconds
-And I enter tag slug "$string_1"
+And I enter tag slug "$string_1" "Version 5.22.10" "Tags" "DeleteTag" "7_IngresarSlug"
 And I wait for 1 seconds
-And I enter tag description "$string_2"
+And I enter tag description "$string_2" "Version 5.22.10" "Tags" "DeleteTag" "8_IngresarDescripcion"
 And I wait for 1 seconds
-And I click on the button named "Save"
+And I click on the button named "Save" "Version 5.22.10" "Tags" "DeleteTag" "9_ClickSave"
 And I wait for 1 seconds
 
-And I click on the link named "Tags"
+And I click on the link named "Tags" "Version 5.22.10" "Tags" "DeleteTag" "10_ClickTagsValidacion"
 And I wait for 1 seconds
-And I click on the link variable "$$name_1"
+And I click on the link variable "$$name_1" "Version 5.22.10" "Tags" "DeleteTag" "11_ClickTagCreado"
 And I wait for 1 seconds
-And I click on the button named "Delete tag"
+And I click on the button named "Delete tag" "Version 5.22.10" "Tags" "DeleteTag" "12_ClickDeleteTag"
 And I wait for 1 seconds
-And I click on the button confirm delete tag named "Delete"
+And I click on the button confirm delete tag named "Delete" "Version 5.22.10" "Tags" "DeleteTag" "13_ClickConfirmDeleteTag"
 And I wait for 1 seconds
-And I click on the link named "Tags"
+And I click on the link named "Tags" "Version 5.22.10" "Tags" "DeleteTag" "14_ClickTagsValidacion"
 Then I wait for 5 seconds

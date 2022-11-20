@@ -19,11 +19,31 @@
 
 ## Escenarios de pruebas
 ### 1. Escenarios Post
- * Crear un nuevo post
- * Editar un post
- * Eliminar un post
- * Publicar un post
- * Despublicar un post
+
+
+
+| Escenario    | Validacion   |
+|--------------|--------------|
+|Crear un nuevo post  | Log-in     |
+|   |Crear post   |
+|   |Validar la creación del post     |
+| Editar un post  | Log-in  |
+|   | editar post existente   |
+|   | Validar la edicion del post    |
+| Eliminar un post  |Log-in   |
+|   | crear un post  |
+|   | eliminar un post   |
+|   | valicar que no este en la lista de post   |
+| Publicar un post  | Log-in   |
+|   | Crear un post  |
+|   | Publicar post  |
+|   | Validar que se encuntre en la lista de post publicados  |
+| Despublicar un post   | Log-in   |
+|   |  Crear un post   |
+|   |  Publicar post |
+|   |  Despublicar post |
+|   |  validar que el post se encuentre en la lista de despulicar |
+
 ### 2. Escenarios Paginas
 * Crear un nuevo pagina
 * Editar un pagina

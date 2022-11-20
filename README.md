@@ -8,9 +8,9 @@
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
 # Entregable
- * [Descripción de las funcionalidades de GHOST que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
+ * [Descripción de las funcionalidades de ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
- * [10 Escenarios de prueba con la nueva version Gosth](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
+ * [10 Escenarios de prueba con la nueva version gohst](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
  * [Codigo Reporte comparacion Visual](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
  * [Manual Ejecucion reporte comparacion visual](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
  * [Diferecias Visuales]()

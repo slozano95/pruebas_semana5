@@ -2,8 +2,16 @@ require('cypress-plugin-tab');
 var faker = require('faker');
 
 const url = Cypress.config('baseUrl') || "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin";
+
 var feature = "";
+var functionality = "Page";
 var count = 1;
+var version = "5.22.10";
+function ss(action) {
+    count += 1;
+    cy.screenshot('/'+version+'/'+functionality+'/'+feature+'/'+count+"_"+action)
+}
+
 function login() {
     cy.get('input').then($links => {
         var randomLink = $links.get(0);
@@ -67,11 +75,6 @@ function clickOnRawButton(str) {
     ss("clickOnRawButton_"+str)
 }
 
-function ss(action) {
-    count += 1;
-    cy.screenshot('/5.22.10/'+feature+'/'+count+"_"+action)
-}
-
 function waitSeconds(time) {
     var t = time + 2
     cy.wait(t*1000)
@@ -104,7 +107,7 @@ describe( `Ghost is under smarter monkeys`, function() {
     });
     it(`Unpublishes a page`, function() { 
         var title = randomString();
-        feature = "PAGE_UNPUBLISH"
+        feature = "CreatePageBasic"
         count = 0;
         cy.visit(url).then((win)=>{  
             login();
@@ -129,7 +132,7 @@ describe( `Ghost is under smarter monkeys`, function() {
     })
     it('Creates page with custom url', function() { 
         var title = randomString();
-        feature = "PAGE_CREATE_CUSTOM_URL"
+        feature = "CreatePageCustomURL"
         count = 0;
         cy.visit(url).then((win)=>{  
             login();
@@ -155,7 +158,7 @@ describe( `Ghost is under smarter monkeys`, function() {
     })
     it(`Deletes a page`, function() { 
         var title = randomString();
-        feature = "PAGE_DELETE"
+        feature = "DeletePage"
         count = 0;
         cy.visit(url).then((win)=>{  
             login();
@@ -182,7 +185,7 @@ describe( `Ghost is under smarter monkeys`, function() {
         cy.wait(1000)
     })
     it(`Creates a new page`, function() { 
-        feature = "PAGE_NEW_PAGE"
+        feature = "UnpublishPage"
         count = 0;
         cy.visit(url).then((win)=>{  
             login();

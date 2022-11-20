@@ -7,6 +7,18 @@
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
+## Semana 6
+A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.
+|  ResembleJS | BackStopJS |
+| ------------ | ------------ |
+ |  **PRO** Facilidad de generar reportes, los genera en formato estandar HTML | **CONTRA** Implementación más larga
+ | **PRO** Utilización de escenarios | **CONTRA** No los incluye por defecto |
+ |**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
+ |** CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |** CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
+ |** CONTRA** No se tiene en cuenta contexto alguno|** CONTRA** No se tiene en cuenta contexto alguno|
+ |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
+ |**CONTRA** No se tiene en cuenta contexto alguno|**CONTRA** No se tiene en cuenta contexto alguno|
+ 
 ## Pros y Contras
 [Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
 
@@ -45,9 +57,35 @@
 |   |  validar que el post se encuentre en la lista de despulicar |
 
 ### 2. Escenarios Paginas
-* Crear un nuevo pagina
-* Editar un pagina
-* Eliminar un pagina
+
+| Escenario    | Validacion   |
+|--------------|--------------|
+|Crear nueva página  | Log-in     |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Validar la creación de la página     |
+| Crear página con url personalizada  | Log-in  |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Asignar URL personalizada  |
+|   | Validar la creación de la página     |
+| Eliminar página  |Log-in   |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Editar página  |
+|   | Eliminar página  |
+|   | Confirmar eliminación  |
+| Despublicar una página  | Log-in   |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Editar página  |
+|   | Despublicar página  |
+|   | Confirmar despublicación |
+
 ### 3. Escenarios Tags
  * Crear un nuevo tag
  * Editar un tag
@@ -59,6 +97,36 @@
  * Crear un Miembro incorrecto
  * Editar un Miembro
  * Eliminar un Miembro
+ 
+ 
+| Escenario    | Validacion   |
+|--------------|--------------|
+|Crear nueva página  | Log-in     |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Validar la creación de la página     |
+| Crear página con url personalizada  | Log-in  |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Asignar URL personalizada  |
+|   | Validar la creación de la página     |
+| Eliminar página  |Log-in   |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Editar página  |
+|   | Eliminar página  |
+|   | Confirmar eliminación  |
+| Despublicar una página  | Log-in   |
+|   | Ir a páginas   |
+|   | Crear página   |
+|   | Llenar datos  |
+|   | Editar página  |
+|   | Despublicar página  |
+|   | Confirmar despublicación |
+
 ### 5. Escenarios Login
  * Usuario incorrecto
  * Password incorrecta 

@@ -55,12 +55,13 @@ Then('I see on the message {string} {kraken-string} {kraken-string} {kraken-stri
     }
 });
 
-When('I click on the button delete member named {string}', async function (link) {
-    this.driver.saveScreenshot('../screenshots/screenshot.png')
+When('I click on the button delete member named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');    
     await this.driver.$("span[class='red']").click();
 });
 
-When('I click on the button confirm delete member named {string}', async function (link) {
+When('I click on the button confirm delete member named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/'+ version + '/' + feature + '/' + escenario + '/' + name + '.png');    
     await this.driver.$("button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
 });
 
@@ -83,7 +84,8 @@ When('I enter tag description {kraken-string}', async function (str) {
     return await element.setValue(str);
 });
 
-When('I click on the link variable {kraken-string}', async function (link) {    
+When('I click on the link variable {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {    
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png'); 
     await this.driver.$('*='+link).click();// partial link text
 })
 

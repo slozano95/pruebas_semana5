@@ -17,7 +17,7 @@ And I click on the link named "Posts" "Version 3.42" "Post" "DeletePost" "4_Clic
 And I wait for 1 seconds
 And I click in new post "New post" "Version 3.42" "Post" "DeletePost" "5_ClickNewPost" 
 And I wait for 1 seconds
-And I type on the keyboard name post "$string_1" "Version 3.42" "Post" "DeletePost" "6_IngresarTitulo"
+And I type on the keyboard name post "Version 3.42" "Post" "DeletePost" "6_IngresarTitulo"
 And I wait for 1 seconds
 And I type on the keyboard "$string_1" "Version 3.42" "Post" "DeletePost" "7_IngresarTitulo"
 And I wait for 1 seconds
@@ -27,19 +27,19 @@ And I type on the keyboard "$string_2" "Version 3.42" "Post" "DeletePost" "9_Ing
 And I wait for 1 seconds
 And I click on the button post named "Publish" "Version 3.42" "Post" "DeletePost" "10_ClickPublicar"
 And I wait for 1 seconds
-And I click on the button named "Continue, final review →" "Version 3.42" "Post" "DeletePost" "11_ClickPublicarS"
+And I click on the button named publish confirm "Version 3.42" "Post" "DeletePost" "11_ClickPublicarS"
 And I wait for 1 seconds
-And I click on the button named "Publish & send, right now" "Version 3.42" "Post" "DeletePost" "11_ClickRigh"
+And I type on the keyboard name post "Version 3.42" "Post" "DeletePost" "12_ClickTitulo"
 And I wait for 1 seconds
-And I click on the button named "Back to editor" "Version 3.42" "Post" "DeletePost" "13_ClickBack"
+And I type on the keyboard name post "Version 3.42" "Post" "DeletePost" "13_ClickTitulo"
 And I wait for 1 seconds
-And I click on the button named "Posts" "Version 3.42" "Post" "DeletePost" "14_ClickPostkBack"
+And I click on the link named "Posts" "Version 3.42" "Post" "DeletePost" "14_ClickPostkBack"
 And I wait for 1 seconds
 And I click on the link variable "$$string_1" "Version 3.42" "Post" "DeletePost" "15_ClickVariable"
 And I wait for 1 seconds
 And I click the button named delete settings "Version 3.42" "Post" "DeletePost" "16_ClickSetting"
 And I wait for 1 seconds
-And I click on the button named "Delete post" "Version 3.42" "Post" "DeletePost" "17_ClickDelete"
+And I click on the button named delete post "Version 3.42" "Post" "DeletePost" "17_ClickDelete"
 And I wait for 1 seconds
 And I click on the button confirm delete page named "Delete" "Version 3.42" "Post" "DeletePost" "18_ClickConfirmDeletePage"
 And I wait for 1 seconds

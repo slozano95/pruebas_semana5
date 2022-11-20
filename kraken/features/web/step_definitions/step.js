@@ -153,7 +153,8 @@ When('I hit the tab key on the keyboard {kraken-string} {kraken-string} {kraken-
     await this.driver.keys("Tab");
 })
 
-When('I click on the button confirm delete post named {string}', async function (link) {
+When('I click on the button confirm delete post named {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$(".modal-footer > button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
 });
 

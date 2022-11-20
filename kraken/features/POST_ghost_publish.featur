@@ -6,29 +6,28 @@ Scenario: Create Post and publish with common data
 //Login first
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>"
+When I enter email "<EMAIL>" "Version 5.22.10" "Post" "PublishPost" "IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>"
+And I enter password "<PWD>" "Version 5.22.10" "Post" "PublishPost" "IngresarContrasena"
 And I wait for 1 seconds
-And I click sign in
+And I click sign in "Version 5.22.10" "Post" "PublishPost" "ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Posts"
+And I click on the link named "Posts" "Version 5.22.10" "Post" "PublishPost" "ClickPost" 
 And I wait for 1 seconds
-And I click in new post "New post"
+And I click in new post "New post" "Version 5.22.10" "Post" "PublishPost" "ClickNewPost" 
 And I wait for 1 seconds
-And I type on the keyboard "$string_1"
+And I type on the keyboard "$string_1" "Version 5.22.10" "Post" "PublishPost" "IngresarTitulo"
 And I wait for 1 seconds
-And I hit the tab key on the keyboard
+And I hit the tab key on the keyboard "Version 5.22.10" "Post" "PublishPost" "IngresarTab"
 And I wait for 1 seconds
-And I type on the keyboard "$string_2" 
+And I type on the keyboard "$string_2" "Version 5.22.10" "Post" "PublishPost" "IngrearDescripcion"
 And I wait for 1 seconds
-And I click on the button post named "Publish"
+And I click on the button post named "Publish" "Version 5.22.10" "Post" "PublishPost" "ClickPublicar"
 And I wait for 1 seconds
-And I click on the button named "Continue, final review →"
+And I click on the button named "Continue, final review →" "Version 5.22.10" "Post" "PublishPost" "ClickPublicarS"
 And I wait for 1 seconds
-And I click on the button named "Publish & send, right now"
+And I click on the button named "Publish & send, right now" "Version 5.22.10" "Post" "PublishPost" "ClickRigh"
 And I wait for 1 seconds
-And I click on the link named "Posts"
-
+And I click on the link named "Posts" "Version 5.22.10" "Post" "PublishPost" "ClickPostConfirm"
 Then I wait for 5 seconds

@@ -29,13 +29,15 @@
 .imgname {
     text-align: center;
     font-family: latoregular;
-    color: #787878;
+    color: #410d85db;
     display: block;
     margin: 0 auto;
     text-transform: uppercase;
     padding: 5px 0;
     padding-bottom: 15px;
     font-size: 12px;
+    font-weight: bolder;
+    background-color: darkgray;
 }
 .img2 {
     width: auto;

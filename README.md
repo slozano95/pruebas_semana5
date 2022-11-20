@@ -30,8 +30,6 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 ## Escenarios de pruebas
 ### 1. Escenarios Post
 
-
-
 | Escenario    | Validacion   |
 |--------------|--------------|
 |Crear un nuevo post  | Log-in     |
@@ -85,11 +83,27 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 |   | Confirmar despublicación |
 
 ### 3. Escenarios Tags
- * Crear un nuevo tag
- * Editar un tag
- * Eliminar un tag
- * Editar meta data de un tag
- * Editar tag con un nombre largo
+ | Escenario    | Validacion   |
+|--------------|--------------|
+|Crear un nuevo tag  | Log-in     |
+|   |Crear tag  |
+|   |Validar la creación del tag    |
+|Editar un tag  | Log-in  |
+|   | editar tag   |
+|   | Validar la edicion del tag   |
+|Eliminar un tag  |Log-in   |
+|   | crear un tag  |
+|   | Crear tag   |
+|   | Eliminar tag   |
+|   | valicar que se halla elimanado tag  |
+|Editar meta data de un tag  | Log-in   |
+|   | Crear un tag  |
+|   | editar tag existente |
+|   | Validacion edicion del tag meta data |
+|Editar tag con un nombre largo   | Log-in   |
+|   |  Crear un con nombre largo tag   |
+|   |  validar que se visualice el boton save al guardar |
+
 ### 4. Escenarios Miembros
  * Crear un nuevo Miembro
  * Crear un Miembro incorrecto

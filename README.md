@@ -2,7 +2,7 @@
 ## Integrantes del Grupo
 |  Nombres  | Correo  |  
 |---|---|
-| Leidy Beltrán Romero  | lt.beltranr1@uniandes.edu.co  |
+| Leidy Beltrán Romero  | richardacevedo98@gmail.com  |
 | Santiago Lozano R  |  ssa.lozanolo@uniandes.edu.co |
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |

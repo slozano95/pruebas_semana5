@@ -10,7 +10,7 @@ context('Delete tag with common data', () => {
   describe('delete tag ghost', () => {
     
     it('login ghost', () => {
-      cy.visit('http://localhost:2368/ghost/#/signin')
+      cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
       cy.get('#ember6')
       .type('oa.sanchez2@uniandes.edu.co')
       .should('have.value', 'oa.sanchez2@uniandes.edu.co')      

@@ -3,7 +3,7 @@ describe('Testing Delete Member', () => {
         cy.wait(2000)
     })
     it('Login', () => {
-        cy.visit('http://localhost:2368/ghost/#/signin')
+        cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
         
         cy.get('form').within(() => {
             cy.get('input[name="identification"]').type('richardacevedo98@gmail.com')

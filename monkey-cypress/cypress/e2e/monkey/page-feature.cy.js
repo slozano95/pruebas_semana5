@@ -1,20 +1,21 @@
 require('cypress-plugin-tab');
 var faker = require('faker');
 
-const url = Cypress.config('baseUrl') || "http://localhost:2368/ghost/#/signin";
-
+const url = Cypress.config('baseUrl') || "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin";
+var feature = "";
+var count = 1;
 function login() {
     cy.get('input').then($links => {
         var randomLink = $links.get(0);
         if(!Cypress.dom.isHidden(randomLink)) {
-            cy.wrap(randomLink).type("slozano95@gmail.com", {force: true})
+            cy.wrap(randomLink).type("richardacevedo98@gmail.com", {force: true})
         }
         // cy.wait(1000);
       });
     cy.get('input').then($links => {
         var randomLink = $links.get(1);
         if(!Cypress.dom.isHidden(randomLink)) {
-            cy.wrap(randomLink).type("hola123456", {force: true})
+            cy.wrap(randomLink).type("0123456789", {force: true})
         }
         // cy.wait(1100);
       });
@@ -25,6 +26,8 @@ function login() {
         }
         // cy.wait(1200);
       });
+    cy.wait(5000)
+    ss("login")
 }
 
 function clickOnLink(str) {
@@ -37,6 +40,7 @@ function clickOnLink(str) {
              }
         }
     });
+    ss("clickOnLink_"+str)
 }
 function clickOnButton(str) {
     cy.get('span').then($links => {
@@ -48,6 +52,7 @@ function clickOnButton(str) {
              }
         }
     });
+    ss("clickOnButton_"+str)
 }
 function clickOnRawButton(str) {
     cy.get('button').then($links => {
@@ -59,10 +64,18 @@ function clickOnRawButton(str) {
              }
         }
     });
+    ss("clickOnRawButton_"+str)
+}
+
+function ss(action) {
+    count += 1;
+    cy.screenshot('/5.22.10/'+feature+'/'+count+"_"+action)
 }
 
 function waitSeconds(time) {
-    cy.wait(time*1000)
+    var t = time + 2
+    cy.wait(t*1000)
+    ss("wait_"+time.toString())
 }
 
 function randomString() {
@@ -91,11 +104,14 @@ describe( `Ghost is under smarter monkeys`, function() {
     });
     it(`Unpublishes a page`, function() { 
         var title = randomString();
+        feature = "PAGE_UNPUBLISH"
+        count = 0;
         cy.visit(url).then((win)=>{  
             login();
             waitSeconds(1);
             clickOnLink("Pages");
             clickOnLink("New page");
+            waitSeconds(1);
             cy.focused().type(title)
             waitSeconds(1);
             cy.focused().type("{enter}")
@@ -113,11 +129,14 @@ describe( `Ghost is under smarter monkeys`, function() {
     })
     it('Creates page with custom url', function() { 
         var title = randomString();
+        feature = "PAGE_CREATE_CUSTOM_URL"
+        count = 0;
         cy.visit(url).then((win)=>{  
             login();
             waitSeconds(1);
             clickOnLink("Pages");
             clickOnLink("New page");
+            waitSeconds(1);
             cy.focused().type(title)
             waitSeconds(1);
             cy.focused().type("{enter}")
@@ -136,11 +155,14 @@ describe( `Ghost is under smarter monkeys`, function() {
     })
     it(`Deletes a page`, function() { 
         var title = randomString();
+        feature = "PAGE_DELETE"
+        count = 0;
         cy.visit(url).then((win)=>{  
             login();
             waitSeconds(1);
             clickOnLink("Pages");
             clickOnLink("New page");
+            waitSeconds(1);
             cy.focused().type(title)
             waitSeconds(1);
             cy.focused().type("{enter}")
@@ -160,11 +182,14 @@ describe( `Ghost is under smarter monkeys`, function() {
         cy.wait(1000)
     })
     it(`Creates a new page`, function() { 
+        feature = "PAGE_NEW_PAGE"
+        count = 0;
         cy.visit(url).then((win)=>{  
             login();
             waitSeconds(1);
             clickOnLink("Pages");
             clickOnLink("New page");
+            waitSeconds(1);
             cy.focused().type(randomString())
             waitSeconds(1);
             cy.focused().type("{enter}")

@@ -5,11 +5,11 @@ describe('Testing Edit Post', () => {
     })
     
     it('Edit', () => {
-        cy.visit('http://localhost:2368/ghost/#/signin')
+        cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
         
         cy.get('form').within(() => {
-            cy.get('input[name="identification"]').type('lt.beltranr1@uniandes.edu.co')
-            cy.get('input[name="password"]').type('Alemania15')
+            cy.get('input[name="identification"]').type('richardacevedo98@gmail.com')
+            cy.get('input[name="password"]').type('0123456789')
             cy.get('button[type="submit"]').click()
                     
         })

@@ -1,6 +1,6 @@
 {
     "projectId":"TSDL-Smart-Monkey-with-cypress",
-    "baseUrl":"http://localhost:2368/ghost/#/signin",
+    "baseUrl":"https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin",
     "env":{
         "appName":"App prueba",
         "events":500,

@@ -11,11 +11,11 @@
 [Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
 
 ## Funcionalidades bajo pruebas
-* Funcionalidades Posts
-* Funcionalidades Paginas
-* Funcionalidades Tags
-* Funcionalidades Miembros 
-* Funcionalidades Login
+* Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.
+* Funcionalidades Paginas : Permite la creacionde Paginas que pueden ser publicada o editadas
+* Funcionalidades Tags: Son etiquetas que describen el contenido de un post mediante palabras claves las cuales se puende manipular de diferentes maneras
+* Funcionalidades Miembros: Permite la Creacion de miembro del gosh publicadores, lectore ect
+* Funcionalidades Login: Este es el inicio de Ghost es importante hacer log-in en el portal.
 
 ## Escenarios de pruebas
 ### 1. Escenarios Post

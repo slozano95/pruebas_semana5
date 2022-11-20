@@ -127,11 +127,13 @@ When('I click on the button confirm delete tag named {string}', async function (
 //  Feature Posts
 // ------------------
 
-When('I click in new post {kraken-string}', async function (link) {    
+When('I click in new post {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {    
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png'); 
     await this.driver.$('*='+link).click();
 })
 
-When('I click on the button post named {string}', async function (link) {
+When('I click on the button post named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.$('span*='+link).click();
 })
 
@@ -146,7 +148,8 @@ Then('I see on the message incorrect user {string}', async function (link) {
     }
 });
 
-When('I hit the tab key on the keyboard', async function () {
+When('I hit the tab key on the keyboard {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.keys("Tab");
 })
 
@@ -182,9 +185,9 @@ When('I click on the button named {string} {kraken-string} {kraken-string} {krak
     await this.driver.$('span*='+link).click();
 })
 
-When('I type on the keyboard {kraken-string}', async function (str) {
+When('I type on the keyboard {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str,version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     await this.driver.keys(str)
-    
 });
 
 When('I click the button with class {string}', async function (str) {

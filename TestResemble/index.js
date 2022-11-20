@@ -3,7 +3,7 @@ const compareImages = require("resemblejs/compareImages")
 const config = require("./config.json");
 const fs = require('fs');
 
-const { viewportHeight, viewportWidth, browsers, options, versionBefore, versionAfter } = config;
+const { viewportHeight, viewportWidth, browsers, options, versionBefore, versionAfter, titulo } = config;
 
 async function executeTest(){
     if(browsers.length === 0){
@@ -146,8 +146,7 @@ function createReport(datetime, resInfo){
             <link href="index.css" type="text/css" rel="stylesheet">
         </head>
         <body>
-            <h1>Report for 
-                 <a href="${config.url}"> ${config.url}</a>
+            <h1>Report for ${titulo}
             </h1>
             <p>Executed: ${datetime}</p>
             <div id="visualizer">

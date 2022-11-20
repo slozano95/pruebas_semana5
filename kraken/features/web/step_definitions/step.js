@@ -190,14 +190,23 @@ When('I type on the keyboard {kraken-string} {kraken-string} {kraken-string} {kr
     await this.driver.keys(str)
 });
 
-When('I click the button with class {string}', async function (str) {
+When('I click the button with class {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str, version, feature, escenario, name) {
     let element = await this.driver.$(str);
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     return await element.click();
 });
-When('I write {kraken-string} on the input {string}', async function (str,str2) {
+When('I write {kraken-string} on the input {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (str,str2, version, feature, escenario, name) {
     let element = await this.driver.$(str2);
-    return await element.setValue(str);
+    element.setValue(str);
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    return await element;
 });
+
+When('I click on the button confirm delete page named {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    await this.driver.$(".modal-footer > button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
+});
+
 
 
 

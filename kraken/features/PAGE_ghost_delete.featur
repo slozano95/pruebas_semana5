@@ -1,32 +1,44 @@
-@user4 @web
+Feature: Delete Page
+
+@user1 @web
 Scenario: Delete a page
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>"
+When I enter email "<EMAIL>" "Version 5.22.10" "Page" "DeletePage" "IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>"
+And I enter password "<PWD>" "Version 5.22.10" "Page" "DeletePage" "IngresarPassword"
 And I wait for 1 seconds
-And I click sign in
+And I click sign in "Version 5.22.10" "Page" "DeletePage" "ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Pages"
-And I click on the link named "New page"
-And I type on the keyboard "$string_1"
-And I hit the tab key on the keyboard
-And I type on the keyboard "$string_2"
+And I click on the link named "Pages" "Version 5.22.10" "Page" "DeletePage" "ClickPages"
 And I wait for 1 seconds
-And I click on the button named "Publish"
+And I click on the link named "New page" "Version 5.22.10" "Page" "DeletePage" "ClickNewPage"
 And I wait for 1 seconds
-And I click on the button named "Continue, final review →"
+And I type on the keyboard "$string_1" "Version 5.22.10" "Page" "DeletePage" "IngresarTitulo"
 And I wait for 1 seconds
-And I click on the button named "Publish page, right now"
+And I hit the tab key on the keyboard "Version 5.22.10" "Page" "DeletePage" "ClickTabulador"
 And I wait for 1 seconds
-And I click on the button named "Back to editor"
-And I click on the button named "Pages"
+And I type on the keyboard "$string_2" "Version 5.22.10" "Page" "DeletePage" "IngresarCuerpoPagia"
 And I wait for 1 seconds
-And I click on the link variable "$$string_1"
+And I click on the button named "Publish" "Version 5.22.10" "Page" "DeletePage" "ClickPublish"
 And I wait for 1 seconds
-And I click the button with class ".settings-menu-toggle"
-And I click on the button named "Delete page"
-And I click on the button named "Delete"
-Then I wait for 1 seconds
+And I click on the button named "Continue, final review →" "Version 5.22.10" "Page" "DeletePage" "ClickContinue"
+And I wait for 1 seconds
+And I click on the button named "Publish page, right now" "Version 5.22.10" "Page" "DeletePage" "ClickPublishRightNow"
+And I wait for 1 seconds
+And I click on the button named "Back to editor" "Version 5.22.10" "Page" "DeletePage" "ClickBackEditor"
+And I wait for 1 seconds
+And I click on the button named "Pages" "Version 5.22.10" "Page" "DeletePage" "ClickPagesValidacion"
+And I wait for 1 seconds
+And I click on the link variable "$$string_1" "Version 5.22.10" "Page" "DeletePage" "ClickPageCreated"
+And I wait for 1 seconds
+And I click the button with class ".settings-menu-toggle" "Version 5.22.10" "Page" "DeletePage" "ClickMenuLateral"
+And I wait for 1 seconds
+And I click on the button named "Delete page" "Version 5.22.10" "Page" "DeletePage" "ClickDeletePage"
+And I wait for 1 seconds
+And I click on the button confirm delete page named "Delete" "Version 5.22.10" "Page" "DeletePage" "ClickConfirmDeletePage"
+And I wait for 1 seconds
+And I click on the link named "Pages" "Version 5.22.10" "Page" "DeletePage" "ClickPagesOtraValidacion"
+
+Then I wait for 5 seconds

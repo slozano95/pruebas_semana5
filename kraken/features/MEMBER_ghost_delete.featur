@@ -34,4 +34,5 @@ And I wait for 1 seconds
 And I click on the button confirm delete member named "Delete member" "Version 5.22.10" "Member" "DeleteMember" "ClickEliminarMe"
 And I wait for 1 seconds
 And I click on the link named "Members" "Version 5.22.10" "Member" "DeleteMember" "ClickMiembrosValidacionM"
+
 Then I wait for 5 seconds

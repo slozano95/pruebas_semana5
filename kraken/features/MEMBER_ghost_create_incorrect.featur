@@ -25,7 +25,5 @@ And I wait for 1 seconds
 And I see on the message "Invalid Email." "Version 5.22.10" "Member" "CreateMemberIncorrect" "VerMensaje"
 And I wait for 1 seconds
 And I click on the link named "Members" "Version 5.22.10" "Member" "CreateMemberIncorrect" "ClickNombreMiembro"
-And I wait for 1 seconds
-And I click on the button named "Leave" "Version 5.22.10" "Member" "CreateMemberIncorrect" "ClickLeave"
 
 Then I wait for 5 seconds

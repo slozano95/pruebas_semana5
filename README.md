@@ -105,39 +105,33 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 |   |  validar que se visualice el boton save al guardar |
 
 ### 4. Escenarios Miembros
- * Crear un nuevo Miembro
- * Crear un Miembro incorrecto
- * Editar un Miembro
- * Eliminar un Miembro
- 
- 
-| Escenario    | Validacion   |
+
+
+| Escenario    | Validación   |
 |--------------|--------------|
-|Crear nueva página  | Log-in     |
-|   | Ir a páginas   |
-|   | Crear página   |
-|   | Llenar datos  |
-|   | Validar la creación de la página     |
-| Crear página con url personalizada  | Log-in  |
-|   | Ir a páginas   |
-|   | Crear página   |
-|   | Llenar datos  |
-|   | Asignar URL personalizada  |
-|   | Validar la creación de la página     |
-| Eliminar página  |Log-in   |
-|   | Ir a páginas   |
-|   | Crear página   |
-|   | Llenar datos  |
-|   | Editar página  |
-|   | Eliminar página  |
-|   | Confirmar eliminación  |
-| Despublicar una página  | Log-in   |
-|   | Ir a páginas   |
-|   | Crear página   |
-|   | Llenar datos  |
-|   | Editar página  |
-|   | Despublicar página  |
-|   | Confirmar despublicación |
+| Crear nuevo miembro  | Log-in     |
+|   | Crear nuevo miembro   |
+|   | Llenar datos del miembro   |
+|   | Guardar datos  |
+|   | Validar la creación del miembro     |
+| Crear nuevo miembro  | Log-in     |
+|   | Crear nuevo miembro   |
+|   | Llenar datos del miembro con email incorrecto  |
+|   | Intentar guardar datos  |
+|   | Validar la nó creación del miembro     |
+| Editar miembro  | Log-in     |
+|   | Crear nuevo miembro   |
+|   | Llenar datos del miembro   |
+|   | Guardar datos  |
+|   | Cambiar datos del miembro  |
+|   | Guardar datos  |
+|   | Validar la edición del miembro     |
+| Eliminar miembro  | Log-in     |
+|   | Crear nuevo miembro   |
+|   | Llenar datos del miembro   |
+|   | Guardar datos  |
+|   | Eliminar miembro |
+|   | Validar la eliminación del miembro     |
 
 ### 5. Escenarios Login
  * Usuario incorrecto

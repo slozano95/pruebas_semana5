@@ -134,8 +134,17 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 |   | Validar la eliminación del miembro     |
 
 ### 5. Escenarios Login
- * Usuario incorrecto
- * Password incorrecta 
+| Escenario    | Validacion   |
+|--------------|--------------|
+|Usuario incorrecto  | Log-in     |
+|   | crear un usuario   |
+|   | intentar ingresar con otro usuario   |
+|   | Validar el no ingreso al la herramienta   |
+|Password incorrecta| Log-in  |
+|   | crear un usuario   |
+|   | ingresar en el login con otra clave   |
+|   |Validar el no ingreso al la herramienta   |
+
 
 ## Acceso Script de pruebas por Herramienta
 ## Cypress

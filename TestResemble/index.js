@@ -11,95 +11,67 @@ async function executeTest(){
     }
     let resultInfo = {};
     let datetime = new Date().toISOString().replace(/:/g,".");
-    var escenarios1 = fs.readdirSync(versionBefore);
+    var nivel1 = fs.readdirSync(versionBefore);
     
-    console.log(escenarios1);
+    console.log(nivel1);
     if (!fs.existsSync(`./results/${datetime}`)){
               fs.mkdirSync(`./results/${datetime}`, { recursive: true });
       }
-    for(e of escenarios1){
-      var archivos = fs.readdirSync("./results/version1/"+e);
-      var imageArray = [];  
-      for(arch of archivos){
-        console.log("patch 1 "+ versionBefore + "/" + e + "/" + arch);
-        console.log("patch 2 "+ versionAfter + "/" + e + "/" + arch);
+    for(e of nivel1){
+      var nivel2 = fs.readdirSync(versionBefore+"/"+e);      
+      console.log(nivel2);
+      for(f of nivel2){
+        var imagenes = fs.readdirSync(versionBefore+"/"+ e + "/"+ f);
+        var imageArray = [];  
+        for(arch of imagenes){
 
-        var nombreArchivo = arch.split(".");
-        var before = versionBefore + "/" + e + "/" + arch;
-        var after = versionAfter + "/" + e + "/" + arch;
-        var conpare = versionAfter + "/" + e;
-        var nombreArchivoBefore = `before-${nombreArchivo[0]}.png`
-        var nombreArchivoAfter = `after-${nombreArchivo[0]}.png`
-        var nombreArchivoCompare = `compare-${nombreArchivo[0]}.png`
+          console.log("patch 1 "+ versionBefore + "/" + e + "/" + f + "/" + arch);
+          console.log("patch 2 "+ versionAfter + "/" + e + "/" + f + "/" + arch);
 
-        var beforeDestino = `./results/${datetime}/before-${nombreArchivo[0]}.png`
-        var afterDestino = `./results/${datetime}/after-${nombreArchivo[0]}.png`
+          var nombreArchivo = arch.split(".");
+          var before = versionBefore + "/" + e + "/" + f + "/" + arch;
+          var after = versionAfter + "/" + e + "/" + f + "/" + arch;
+          
+          var nombreArchivoBefore = `before-${nombreArchivo[0]}.png`
+          var nombreArchivoAfter = `after-${nombreArchivo[0]}.png`
+          var nombreArchivoCompare = `compare-${nombreArchivo[0]}.png`
 
-        
-        fs.copyFileSync(before,beforeDestino);
-        fs.copyFileSync(after,afterDestino);
+          var beforeDestino = `./results/${datetime}/before-${nombreArchivo[0]}.png`
+          var afterDestino = `./results/${datetime}/after-${nombreArchivo[0]}.png`
 
-        const data = await compareImages(
-          fs.readFileSync(before),
-          fs.readFileSync(after),
-          options
-      );
+          
+          fs.copyFileSync(before,beforeDestino);
+          fs.copyFileSync(after,afterDestino);
 
-        newData = {
-          isSameDimensions: data.isSameDimensions,
-          dimensionDifference: data.dimensionDifference,
-          rawMisMatchPercentage: data.rawMisMatchPercentage,
-          misMatchPercentage: data.misMatchPercentage,
-          diffBounds: data.diffBounds,
-          analysisTime: data.analysisTime,
-          nombreArchivoBefore: nombreArchivoBefore,
-          nombreArchivoAfter: nombreArchivoAfter,
-          nombreArchivoCompare: nombreArchivoCompare
-      }
+          const data = await compareImages(
+            fs.readFileSync(before),
+            fs.readFileSync(after),
+            options
+        );
 
-      imageArray.push(newData);
+          newData = {
+            isSameDimensions: data.isSameDimensions,
+            dimensionDifference: data.dimensionDifference,
+            rawMisMatchPercentage: data.rawMisMatchPercentage,
+            misMatchPercentage: data.misMatchPercentage,
+            diffBounds: data.diffBounds,
+            analysisTime: data.analysisTime,
+            nombreArchivoBefore: nombreArchivoBefore,
+            nombreArchivoAfter: nombreArchivoAfter,
+            nombreArchivoCompare: nombreArchivoCompare
+        }
 
-      fs.writeFileSync(`./results/${datetime}/compare-${nombreArchivo[0]}.png`, data.getBuffer());
-      //fs.writeFileSync(`./results/${datetime}/compare-${b}.png`, data.getBuffer());
-      }
-      resultInfo[e] = imageArray;
-      //console.log(imageArray);
+        imageArray.push(newData);
+
+        fs.writeFileSync(`./results/${datetime}/compare-${nombreArchivo[0]}.png`, data.getBuffer());
+
+        }
+        resultInfo[e] = imageArray;
+      //console.log(imageArray);        
+      }      
     }
     console.log(resultInfo);
-    // for(b of browsers){
-    //     if(!b in ['chromium']){
-    //         return;
-    //     }
-    //     if (!fs.existsSync(`./results/${datetime}`)){
-    //         fs.mkdirSync(`./results/${datetime}`, { recursive: true });
-    //     }
-    //     //Launch the current browser context
-    //     const browser = await playwright[b].launch({headless: true, viewport: {width:viewportWidth, height:viewportHeight}});
-    //     const context = await browser.newContext();
-    //     const page = await context.newPage(); 
-    //     await page.goto(config.url);
-    //     await page.screenshot({ path: `./results/${datetime}/before-${b}.png` });
-    //     await page.click('#generate');
-    //     await page.screenshot({ path: `./results/${datetime}/after-${b}.png` });
-    //     await browser.close();
         
-    //     const data = await compareImages(
-    //         fs.readFileSync(`./results/${datetime}/before-${b}.png`),
-    //         fs.readFileSync(`./results/${datetime}/after-${b}.png`),
-    //         options
-    //     );
-    //     resultInfo[b] = {
-    //         isSameDimensions: data.isSameDimensions,
-    //         dimensionDifference: data.dimensionDifference,
-    //         rawMisMatchPercentage: data.rawMisMatchPercentage,
-    //         misMatchPercentage: data.misMatchPercentage,
-    //         diffBounds: data.diffBounds,
-    //         analysisTime: data.analysisTime
-    //     }
-    //     fs.writeFileSync(`./results/${datetime}/compare-${b}.png`, data.getBuffer());
-
-    // }
-    
     fs.writeFileSync(`./results/${datetime}/report.html`, createReport(datetime, resultInfo));
     fs.copyFileSync('./index.css', `./results/${datetime}/index.css`);
 

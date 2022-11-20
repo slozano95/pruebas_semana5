@@ -1,8 +1,8 @@
 {
     "url":"https://monitor177.github.io/color-palette/",
     "browsers":["chromium"],
-    "versionBefore":"./results/version1",
-    "versionAfter":"./results/version2",
+    "versionBefore":"../screenshots/Version 5.22.10",
+    "versionAfter":"../screenshots/Version 3.42",
     "options":{
         "output": {
             "errorColor": {

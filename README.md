@@ -7,25 +7,14 @@
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
-## Semana 6
-A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.
-
-|  ResembleJS | BackStopJS |
-| ------------ | ------------ |
-|  **PRO** Facilidad de generar reportes, los genera en formato estandar HTML | **CONTRA** Implementación más larga
-| **PRO** Utilización de escenarios | **CONTRA** No los incluye por defecto |
-|**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
-|**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
-|**CONTRA** No se tiene en cuenta contexto alguno|**CONTRA** No se tiene en cuenta contexto alguno|
-
 ## Pros y Contras
 [Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
 
 ## Funcionalidades bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.
-* Funcionalidades Paginas : Permite la creacionde Paginas que pueden ser publicada o editadas
+* Funcionalidades Paginas : Permite la creacion de Paginas que pueden ser publicada o editadas.
 * Funcionalidades Tags: Son etiquetas que describen el contenido de un post mediante palabras claves las cuales se puende manipular de diferentes maneras
-* Funcionalidades Miembros: Permite la Creacion de miembro del gosh publicadores, lectore ect
+* Funcionalidades Miembros: Permite la Creacion de miembro del gosh publicadores, lectore ect.
 * Funcionalidades Login: Este es el inicio de Ghost es importante hacer log-in en el portal.
 
 ## Escenarios de pruebas

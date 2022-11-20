@@ -10,7 +10,7 @@
 # Entregable
  * [Descripción de las funcionalidades de ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
- * [10 Escenarios de prueba con la nueva version gohst](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
+ * [10 Escenarios de prueba con la nueva version ghost](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
  * [Codigo Reporte comparacion Visual](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
  * [Manual Ejecucion reporte comparacion visual](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
  * [Diferecias Visuales]()
@@ -34,7 +34,7 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.
 * Funcionalidades Paginas : Permite la creacion de Paginas que pueden ser publicada o editadas.
 * Funcionalidades Tags: Son etiquetas que describen el contenido de un post mediante palabras claves las cuales se puende manipular de diferentes maneras
-* Funcionalidades Miembros: Permite la Creacion de miembro del gosh publicadores, lectore ect.
+* Funcionalidades Miembros: Permite la Creacion de miembro del ghost publicadores, lectore ect.
 * Funcionalidades Login: Este es el inicio de Ghost es importante hacer log-in en el portal.
 
 ## Escenarios de pruebas

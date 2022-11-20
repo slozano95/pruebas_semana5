@@ -7,6 +7,17 @@
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
+## Semana 6
+A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.
+
+|  ResembleJS | BackStopJS |
+| ------------ | ------------ |
+|  **PRO** Facilidad de generar reportes, los genera en formato estandar HTML | **CONTRA** Implementación más larga
+| **PRO** Utilización de escenarios | **CONTRA** No los incluye por defecto |
+|**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
+|** CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |** CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
+|** CONTRA** No se tiene en cuenta contexto alguno|** CONTRA** No se tiene en cuenta contexto alguno|
+
 ## Pros y Contras
 [Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
 

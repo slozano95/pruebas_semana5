@@ -1,4 +1,4 @@
-# pruebas_semana5
+# Pruebas_semana6
 ## Integrantes del Grupo
 |  Nombres  | Correo  |  
 |---|---|
@@ -6,6 +6,10 @@
 | Santiago Lozano R  |  ssa.lozanolo@uniandes.edu.co |
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
+
+# Entregable
+  [Descripción de las funcionalidades de GHOST que se incluyen en las pruebas de esta semana.](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
+
 
 ## Semana 6
 A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.
@@ -20,7 +24,7 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 ## Pros y Contras
 [Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
 
-## Funcionalidades bajo pruebas
+## Funcionalidades Bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.
 * Funcionalidades Paginas : Permite la creacion de Paginas que pueden ser publicada o editadas.
 * Funcionalidades Tags: Son etiquetas que describen el contenido de un post mediante palabras claves las cuales se puende manipular de diferentes maneras

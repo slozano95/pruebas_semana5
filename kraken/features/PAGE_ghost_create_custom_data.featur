@@ -6,31 +6,31 @@ Scenario: Create page with common data
 //Login first
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>" "Version 5.22.10" "Page" "CreatePageBasic" "1_IngresarEmail"
+When I enter email "<EMAIL>" "Version 3.42" "Page" "CreatePageBasic" "1_IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>" "Version 5.22.10" "Page" "CreatePageBasic" "2_IngresarPassword"
+And I enter password "<PWD>" "Version 3.42" "Page" "CreatePageBasic" "2_IngresarPassword"
 And I wait for 1 seconds
-And I click sign in "Version 5.22.10" "Page" "CreatePageBasic" "3_ClickLogin"
+And I click sign in "Version 3.42" "Page" "CreatePageBasic" "3_ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Pages" "Version 5.22.10" "Page" "CreatePageBasic" "4_ClickPages"
+And I click on the link named "Pages" "Version 3.42" "Page" "CreatePageBasic" "4_ClickPages"
 And I wait for 1 seconds
-And I click on the link named "New page" "Version 5.22.10" "Page" "CreatePageBasic" "5_ClickNewPage"
+And I click on the link named "New page" "Version 3.42" "Page" "CreatePageBasic" "5_ClickNewPage"
 And I wait for 1 seconds
-And I type on the keyboard "$string_1" "Version 5.22.10" "Page" "CreatePageBasic" "6_IngresarTitulo"
+And I type on the keyboard "$string_1" "Version 3.42" "Page" "CreatePageBasic" "6_IngresarTitulo"
 And I wait for 1 seconds
-And I hit the tab key on the keyboard "Version 5.22.10" "Page" "CreatePageBasic" "7_ClickTabulador"
+And I hit the tab key on the keyboard "Version 3.42" "Page" "CreatePageBasic" "7_ClickTabulador"
 And I wait for 1 seconds
-And I type on the keyboard "$string_2" "Version 5.22.10" "Page" "CreatePageBasic" "8_IngresarCuerpoPage"
+And I type on the keyboard "$string_2" "Version 3.42" "Page" "CreatePageBasic" "8_IngresarCuerpoPage"
 And I wait for 1 seconds
-And I click on the button named "Publish" "Version 5.22.10" "Page" "CreatePageBasic" "9_ClickPublish"
+And I click on the button named "Publish" "Version 3.42" "Page" "CreatePageBasic" "9_ClickPublish"
 And I wait for 1 seconds
-And I click on the button named "Continue, final review →" "Version 5.22.10" "Page" "CreatePageBasic" "10_ClickContinue"
+And I click on the button named publish confirm "Version 3.42" "Page" "CreatePageBasic" "10_ClickContinue"
 And I wait for 1 seconds
-And I click on the button named "Publish page, right now" "Version 5.22.10" "Page" "CreatePageBasic" "11_ClickPublishRightNow"
+And I type on the keyboard name page "Version 3.42" "Page" "CreatePageBasic" "11_ClickPublishRightNow"
 And I wait for 1 seconds
-And I click on the button named "Back to editor" "Version 5.22.10" "Page" "CreatePageBasic" "12_ClickBackEditor"
+And I type on the keyboard name page "Version 3.42" "Page" "CreatePageBasic" "12_ClickBackEditor"
 And I wait for 1 seconds
-And I click on the link named "Pages" "Version 5.22.10" "Page" "CreatePageBasic" "13_ClickPagesValidate"
+And I click on the link named "Pages" "Version 3.42" "Page" "CreatePageBasic" "13_ClickPagesValidate"
 
 Then I wait for 5 seconds

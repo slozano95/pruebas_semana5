@@ -167,9 +167,9 @@ When('I hit the tab key on the keyboard {kraken-string} {kraken-string} {kraken-
     await this.driver.keys("Tab");
 });
 
-When('I click on the button confirm delete post named {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
+When('I click on the button confirm delete post named {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
-    await this.driver.$(".modal-footer > button[class='gh-btn gh-btn-red gh-btn-icon ember-view'] > span").click();
+    await this.driver.$("form > button[class='gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button'] > span").click();
 });
 
 
@@ -185,7 +185,7 @@ When('I click on the button named publish confirm {kraken-string} {kraken-string
 
 When('I click on the button named delete post {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
-    await this.driver.$("form > button[class='gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button'] > span").click();
+    await this.driver.$("form > button[class='gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button']").click();
 });
 
 When('I click on the button named valid {string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (link, version, feature, escenario, name) {
@@ -223,6 +223,12 @@ When('I type on the keyboard {kraken-string} {kraken-string} {kraken-string} {kr
 When('I type on the keyboard name post {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
     this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
     let element = await this.driver.$("textarea[placeholder='Post Title'");
+    await element.click();
+});
+
+When('I type on the keyboard name page {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (version, feature, escenario, name) {
+    this.driver.saveScreenshot('../Screenshots/' + version + '/' + feature + '/' + escenario + '/' + name + '.png');
+    let element = await this.driver.$("textarea[placeholder='Page Title'");
     await element.click();
 });
 

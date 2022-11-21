@@ -1,7 +1,7 @@
 ## Instalación Ambiente GHOST para pruebas. ¡ Importante !
 
 * Versión Principal ( 5.22.10 ) - Usada en la semana 5 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
-     "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin"
+     URL: https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin
 * Versión Antigua para Regresión Visual ( 3.42 ) : Esta versión requiere seguir unos pasos de instalación para que las pruebas funcionen correctamente:
      [Pasos de Instalación Version 3.42](https://github.com/slozano95/pruebas_semana5/wiki/Instalaci%C3%B3n-GHOST-Versi%C3%B3n-3.42)
 
@@ -25,7 +25,7 @@
  * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
  * [Pro y Contra Herramientas de comparacion visuales - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
  * [Codigo Reporte comparacion Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Video]()
+ * [Video - Entrega Semana 6]()
  * [Pro y Contra Herramientas de Testing - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5/wiki#pros-y-contras-de-las-herramientas-para-pruebas-e2e-kraken-vs-cypress)
 
 ## Semana 6

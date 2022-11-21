@@ -6,28 +6,28 @@ Scenario: Create Post and publish with common data
 //Login first
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>" "Version 3.42" "Post" "PublishPost" "1_IngresarEmail"
+When I enter email "<EMAIL>" "Version 5.22.10" "Post" "PublishPost" "1_IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>" "Version 3.42" "Post" "PublishPost" "2_IngresarContrasena"
+And I enter password "<PWD>" "Version 5.22.10" "Post" "PublishPost" "2_IngresarContrasena"
 And I wait for 1 seconds
-And I click sign in "Version 3.42" "Post" "PublishPost" "3_ClickLogin"
+And I click sign in "Version 5.22.10" "Post" "PublishPost" "3_ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Posts" "Version 3.42" "Post" "PublishPost" "4_ClickPost" 
+And I click on the link named "Posts" "Version 5.22.10" "Post" "PublishPost" "4_ClickPost" 
 And I wait for 1 seconds
-And I click in new post "New post" "Version 3.42" "Post" "PublishPost" "5_ClickNewPost" 
+And I click in new post "New post" "Version 5.22.10" "Post" "PublishPost" "5_ClickNewPost" 
 And I wait for 1 seconds
-And I type on the keyboard "$string_1" "Version 3.42" "Post" "PublishPost" "6_IngresarTitulo"
+And I type on the keyboard "$string_1" "Version 5.22.10" "Post" "PublishPost" "6_IngresarTitulo"
 And I wait for 1 seconds
-And I hit the tab key on the keyboard "Version 3.42" "Post" "PublishPost" "7_IngresarTab"
+And I hit the tab key on the keyboard "Version 5.22.10" "Post" "PublishPost" "7_IngresarTab"
 And I wait for 1 seconds
-And I type on the keyboard "$string_2" "Version 3.42" "Post" "PublishPost" "8_IngrearDescripcion"
+And I type on the keyboard "$string_2" "Version 5.22.10" "Post" "PublishPost" "8_IngrearDescripcion"
 And I wait for 1 seconds
-And I click on the button post named "Publish" "Version 3.42" "Post" "PublishPost" "9_ClickPublicar"
+And I click on the button post named "Publish" "Version 5.22.10" "Post" "PublishPost" "9_ClickPublicar"
 And I wait for 1 seconds
-And I click on the button named publish confirm "Version 3.42" "Post" "PublishPost" "10_ClickPublicarS"
+And I click on the button named "Continue, final review →" "Version 5.22.10" "Post" "PublishPost" "10_ClickPublicarS"
 And I wait for 1 seconds
-And I type on the keyboard name post "Version 3.42" "Post" "PublishPost" "11_ClickRigh"
+And I click on the button named "Publish & send, right now" "Version 5.22.10" "Post" "PublishPost" "11_ClickRigh"
 And I wait for 1 seconds
-And I type on the keyboard name post "Version 3.42" "Post" "PublishPost" "12_ClickPostConfirm"
+And I click on the link named "Posts" "Version 5.22.10" "Post" "PublishPost" "12_ClickPostConfirm"
 Then I wait for 5 seconds

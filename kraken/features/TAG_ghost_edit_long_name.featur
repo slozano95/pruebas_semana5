@@ -5,38 +5,38 @@ Scenario: Edit Tag with long name
 
 Given I navigate to page "<URL>"
 And I wait for 2 seconds
-When I enter email "<EMAIL>" "Version 3.42" "Tags" "EditTagLongName" "1_IngresarEmail"
+When I enter email "<EMAIL>" "Version 5.22.10" "Tags" "EditTagLongName" "1_IngresarEmail"
 And I wait for 1 seconds
-And I enter password "<PWD>" "Version 3.42" "Tags" "EditTagLongName" "2_IngresarContrasena"
+And I enter password "<PWD>" "Version 5.22.10" "Tags" "EditTagLongName" "2_IngresarContrasena"
 And I wait for 1 seconds
-And I click sign in "Version 3.42" "Tags" "EditTagLongName" "3_ClickLogin"
+And I click sign in "Version 5.22.10" "Tags" "EditTagLongName" "3_ClickLogin"
 And I wait for 2 seconds
 
-And I click on the link named "Tags" "Version 3.42" "Tags" "EditTagLongName" "4_ClickTags"
+And I click on the link named "Tags" "Version 5.22.10" "Tags" "EditTagLongName" "4_ClickTags"
 And I wait for 1 seconds
-And I click on the link named "New tag" "Version 3.42" "Tags" "EditTagLongName" "5_ClickNewTag"
+And I click on the link named "New tag" "Version 5.22.10" "Tags" "EditTagLongName" "5_ClickNewTag"
 And I wait for 1 seconds
-And I enter tag name "$name_1" "Version 3.42" "Tags" "EditTagLongName" "6_IngresarName"
+And I enter tag name "$name_1" "Version 5.22.10" "Tags" "EditTagLongName" "6_IngresarName"
 And I wait for 1 seconds
-And I enter tag slug "$string_1" "Version 3.42" "Tags" "EditTagLongName" "7_IngresarSlug"
+And I enter tag slug "$string_1" "Version 5.22.10" "Tags" "EditTagLongName" "7_IngresarSlug"
 And I wait for 1 seconds
-And I enter tag description "$string_2" "Version 3.42" "Tags" "EditTagLongName" "8_IngresarDescripcion"
+And I enter tag description "$string_2" "Version 5.22.10" "Tags" "EditTagLongName" "8_IngresarDescripcion"
 And I wait for 1 seconds
-And I click on the button named "Save" "Version 3.42" "Tags" "EditTagLongName" "9_ClickSave"
+And I click on the button named "Save" "Version 5.22.10" "Tags" "EditTagLongName" "9_ClickSave"
 And I wait for 1 seconds
 
-And I click on the link named "Tags" "Version 3.42" "Tags" "EditTagLongName" "10_ClickTagsValidacion"
+And I click on the link named "Tags" "Version 5.22.10" "Tags" "EditTagLongName" "10_ClickTagsValidacion"
 And I wait for 1 seconds
-And I click on the link variable "$$name_1" "Version 3.42" "Tags" "EditTagLongName" "11_ClickTagCreado"
+And I click on the link variable "$$name_1" "Version 5.22.10" "Tags" "EditTagLongName" "11_ClickTagCreado"
 And I wait for 1 seconds
-And I enter tag name "<LONG_NAME_TAG>" "Version 3.42" "Tags" "EditTagLongName" "12_IngrearNombreModificado"
+And I enter tag name "<LONG_NAME_TAG>" "Version 5.22.10" "Tags" "EditTagLongName" "12_IngrearNombreModificado"
 And I wait for 1 seconds
-And I enter tag slug "$string_2" "Version 3.42" "Tags" "EditTagLongName" "13_IngresarSlugModificado"
+And I enter tag slug "$string_2" "Version 5.22.10" "Tags" "EditTagLongName" "13_IngresarSlugModificado"
 And I wait for 1 seconds
-And I enter tag description "$string_2" "Version 3.42" "Tags" "EditTagLongName" "14_IngresarDescripcionModificado"
+And I enter tag description "$string_2" "Version 5.22.10" "Tags" "EditTagLongName" "14_IngresarDescripcionModificado"
 And I wait for 1 seconds
-And I click on the button named "Save" "Version 3.42" "Tags" "EditTagLongName" "15_ClickSave"
+And I click on the button named "Save" "Version 5.22.10" "Tags" "EditTagLongName" "15_ClickSave"
 And I wait for 1 seconds
-And I click on the link named "Tags" "Version 3.42" "Tags" "EditTagLongName" "16_ClickTagsValidacionUltimo"
+And I click on the link named "Tags" "Version 5.22.10" "Tags" "EditTagLongName" "16_ClickTagsValidacionUltimo"
 
 Then I wait for 5 seconds

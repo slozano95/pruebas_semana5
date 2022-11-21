@@ -59,17 +59,17 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 #### ---monkey (Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
 
 ## Kraken
-#### - kraken ( Pruebas a la version 5.22.10 de GHOST ).
+### - kraken ( Pruebas a la version 5.22.10 de GHOST ).
 #### --features (Contine los features correspondientes a las version 5.22.10 ).
 
-#### - kraken 3.42 ( Pruebas a la version 3.42 de GHOST ).
+### - kraken 3.42 ( Pruebas a la version 3.42 de GHOST ).
 #### --features (Contine los features correspondientes a las version 3.42 ).
 
-#### - Screenshots ( Pantallazos d elas pruebas para la version 3.42 y 5.22.10 de GHOST ).
+### - Screenshots ( Pantallazos d elas pruebas para la version 3.42 y 5.22.10 de GHOST ).
 #### --Version 5.22.10 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10).
 #### --Version 3.42 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42).
 
-#### - TestResemble ( Reporte bajo la herramienta de Regresión Visual RESEMBLE ).
+### - TestResemble ( Reporte bajo la herramienta de Regresión Visual RESEMBLE ).
 #### --results/2022-11-20T22.02.16.475Z/report.html (Reporte de la comparación de pantallazos).
 
 ## Funcionalidades Bajo pruebas

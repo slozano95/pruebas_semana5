@@ -1,9 +1,9 @@
-## Instalación Ambiente GHOST para pruebas !Importante¡
+## Instalación Ambiente GHOST para pruebas. ¡ Importante !
 
 * Versión Principal ( 5.22.10 ) - Usada en la semana 5 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
      "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin"
-* Versión Antigua para Regresión Visual ( 3.44 ) : Esta versión requiere seguir unos pasos de instalación para que las pruebas funcionen correctamente:
-     [Pasos de Instalación Version 3.44]()
+* Versión Antigua para Regresión Visual ( 3.42 ) : Esta versión requiere seguir unos pasos de instalación para que las pruebas funcionen correctamente:
+     [Pasos de Instalación Version 3.42](https://github.com/slozano95/pruebas_semana5/wiki/Instalaci%C3%B3n-GHOST-Versi%C3%B3n-3.42)
 
 
 ## Integrantes del Grupo

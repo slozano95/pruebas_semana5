@@ -24,7 +24,7 @@
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
  * [10 Escenarios de prueba con la nueva version ghost](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
  * [Codigo Reporte comparacion Visual](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Diferecias Visuales]()
+ * [Diferencias Visuales](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/VRT%20Report.pdf)
  * [Video]()
 
 ## Semana 6

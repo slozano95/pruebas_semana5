@@ -29,7 +29,7 @@
  * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
  * [Pro y Contra Herramientas de comparacion visuales - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
  * [Codigo Reporte comparacion Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Video - Entrega Semana 6]()
+ * [Video - Entrega Semana 6](https://drive.google.com/file/d/1nWnMa3grD08jyNpva_FqSyl-dDvuSdUI/view?usp=sharing)
  * [Pro y Contra Herramientas de Testing - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5/wiki#pros-y-contras-de-las-herramientas-para-pruebas-e2e-kraken-vs-cypress)
 
 ## Semana 6

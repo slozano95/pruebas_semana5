@@ -52,18 +52,18 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 
 # Estructura del proyecto
 ## Monkey-Cypress
--monkey-cypress /cypress/e2e/monkey (Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
+-monkey-cypress /cypress/e2e/monkey _(Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)_
 
 ## Kraken
-- kraken/features (Contine los features correspondientes a las version 5.22.10)
-- kraken 3.42/features (Contine los features correspondientes a las version 3.42 )
+- kraken/features _(Contine los features correspondientes a las version 5.22.10)_
+- kraken 3.42/features _(Contine los features correspondientes a las version 3.42 )_
 
 ## Screenshots
-- Screenshots/Version 5.22.10 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10).
-- Screenshots/Version 3.42 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42).
+- Screenshots/Version 5.22.10 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10)._
+- Screenshots/Version 3.42 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42)._
 
 ## TestResemble
-- TestResemble/results/2022-11-20T22.02.16.475Z/report.html (Reporte de la comparación de pantallazos).
+- TestResemble/results/2022-11-20T22.02.16.475Z/report.html _(Reporte de la comparación de pantallazos)._
 
 # Funcionalidades Bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.

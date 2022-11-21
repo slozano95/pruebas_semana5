@@ -37,9 +37,6 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
  |**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
  |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
  |**CONTRA** No se tiene en cuenta contexto alguno|**CONTRA** No se tiene en cuenta contexto alguno|
- 
-## Pros y Contras
-[Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
 
 # Versiones de Software Requeridas
 - Ghost: 3.42 y 5.22.10

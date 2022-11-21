@@ -26,6 +26,7 @@
  * [Pro y Contra Herramientas de comparacion visuales - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
  * [Codigo Reporte comparacion Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
  * [Video]()
+ * [Pro y Contra Herramientas de Testing - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5/wiki#pros-y-contras-de-las-herramientas-para-pruebas-e2e-kraken-vs-cypress)
 
 ## Semana 6
 A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.

@@ -8,7 +8,7 @@ Appium, este se instala con el comando npm install -g appium
 
 Pasos de ejecución de pruebas
 - Descargue el repositorio con el comando git clone https://github.com/slozano95/pruebas_semana5
-- Navegue en la terminal hasta la carpeta 'kraken' con el comnando cd kraken
+- Navegue en la terminal hasta la carpeta 'kraken' con el comando cd kraken
 - Note que dentro de la carpeta de features existen varios archivos que NO tienen la extensión .feature.
 - Dado que Kraken no permite la ejecución de varios tests en serie, usted deberá modificar la extensión de las prueba que requiera ejecutar y asegurarse que sea '.feature'.
 Ejemplo:

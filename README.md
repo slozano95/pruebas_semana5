@@ -54,9 +54,9 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 # Estructura del proyecto
 ## Monkey-Cypress
 - monkey-cypress
-|-cypress
-|--e2e
-|---monkey (Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
+-cypress
+--e2e
+---monkey (Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
 
 ## Kraken
 - kraken ( Pruebas a la version 5.22.10 de GHOST ).

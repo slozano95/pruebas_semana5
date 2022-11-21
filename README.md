@@ -14,7 +14,9 @@
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
-# Entregable
+## Indice General Semana 6
+ * [Versiones de Software Requeridas](https://github.com/slozano95/pruebas_semana5/edit/main/README.md#versiones-de-software-requeridas)
+ * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/edit/main/README.md#versiones-de-software-requeridas)
  * [Descripción de las funcionalidades de ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
  * [10 Escenarios de prueba con la nueva version ghost](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
@@ -36,6 +38,23 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
  
 ## Pros y Contras
 [Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
+
+# Versiones de Software Requeridas
+- Ghost: 3.42 y 5.22.10
+- Playwright: 1.27.1
+- Resemblejs: 4.1.0
+- Node: 14.20.1
+- npm: 6.14.17
+- xpath: ^2.0.1
+- Kraken-Node: 1.0.24
+- Cypress: ^11.0.1
+- Google Chrome: 107.0.5304.107 64 bits
+- Windows: Windows 10 64 bits
+
+# Estructura del proyecto
+## Monkey-Cypress
+- 
+## Kraken
 
 ## Funcionalidades Bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.

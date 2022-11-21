@@ -18,13 +18,13 @@
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
  * [Instrucciones para Ejecucion Reporte Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
  * [Reporte de Referencias Visuales HTML - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/report.html)
- * [Pro y Contra Herramientas de comparacion visuales - Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
+ * [Reporte de Referencias Visuales PDF - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/VRT%20Report.pdf)
  * [Registro de Incidencias Encontrados - ISSUES - Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
+ * [Pro y Contra Herramientas de comparacion visuales - Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
  * [Descripción de las funcionalidades de ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
  * [10 Escenarios de prueba con la nueva version ghost](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
  * [Codigo Reporte comparacion Visual](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Diferencias Visuales](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/VRT%20Report.pdf)
  * [Video]()
 
 ## Semana 6

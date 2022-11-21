@@ -5,7 +5,6 @@
 * Versión Antigua para Regresión Visual ( 3.42 ) : Esta versión requiere seguir unos pasos de instalación para que las pruebas funcionen correctamente:
      [Pasos de Instalación Version 3.42](https://github.com/slozano95/pruebas_semana5/wiki/Instalaci%C3%B3n-GHOST-Versi%C3%B3n-3.42)
 
-
 ## Integrantes del Grupo
 |  Nombres  | Correo  |  
 |---|---|
@@ -15,15 +14,17 @@
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
 ## Indice General Semana 6
- * [Versiones de Software Requeridas](https://github.com/slozano95/pruebas_semana5/edit/main/README.md#versiones-de-software-requeridas)
- * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/edit/main/README.md#versiones-de-software-requeridas)
+ * [Versiones de Software Requeridas](https://github.com/slozano95/pruebas_semana5/#versiones-de-software-requeridas)
+ * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
+ * [Instrucciones para Ejecucion Reporte Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
+ * [Reporte de Referencias Visuales HTML - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/report.html)
+ * [Pro y Contra Herramientas de comparacion visuales - Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
+ * [Registro de Incidencias Encontrados - ISSUES - Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
  * [Descripción de las funcionalidades de ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
- * [Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
+ * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
  * [10 Escenarios de prueba con la nueva version ghost](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
  * [Codigo Reporte comparacion Visual](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Manual Ejecucion reporte comparacion visual](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
  * [Diferecias Visuales]()
- * [Pro y Contra Herramientas de comparacion visuales](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
  * [Video]()
 
 ## Semana 6
@@ -53,10 +54,20 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 
 # Estructura del proyecto
 ## Monkey-Cypress
-- 
-## Kraken
+-monkey-cypress /cypress/e2e/monkey (Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
 
-## Funcionalidades Bajo pruebas
+## Kraken
+- kraken/features (Contine los features correspondientes a las version 5.22.10)
+- kraken 3.42/features (Contine los features correspondientes a las version 3.42 )
+
+## Screenshots
+- Screenshots/Version 5.22.10 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10).
+- Screenshots/Version 3.42 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42).
+
+## TestResemble
+- TestResemble/results/2022-11-20T22.02.16.475Z/report.html (Reporte de la comparación de pantallazos).
+
+# Funcionalidades Bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.
 * Funcionalidades Paginas : Permite la creacion de Paginas que pueden ser publicada o editadas.
 * Funcionalidades Tags: Son etiquetas que describen el contenido de un post mediante palabras claves las cuales se puende manipular de diferentes maneras

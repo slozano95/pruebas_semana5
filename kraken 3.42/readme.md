@@ -13,7 +13,7 @@ Pasos de ejecución de pruebas
 ![image](https://user-images.githubusercontent.com/32427075/202960396-7440553c-3cf6-4a16-bd93-4ac6031054f0.png)
 
 - Descargue el repositorio con el comando git clone https://github.com/slozano95/pruebas_semana5
-- Navegue en la terminal hasta la carpeta 'kraken' con el comnando cd kraken
+- Navegue en la terminal hasta la carpeta 'kraken 3.42' con el comando _cd '.\kraken 3.42\'_
 - Note que dentro de la carpeta de features existen varios archivos que NO tienen la extensión .feature.
 - Dado que Kraken no permite la ejecución de varios tests en serie, usted deberá modificar la extensión de las prueba que requiera ejecutar y asegurarse que sea '.feature'.
 Ejemplo:

@@ -19,6 +19,10 @@
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
  * [10 Escenarios de prueba con la nueva version ghost - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/kraken%203.42/features)
+ * [Pruebas Cypress](https://github.com/slozano95/pruebas_semana5/tree/main/monkey-cypress)
+ * Pruebas Kraken
+   * [Pruebas Kraken - Version 5.22.10](https://github.com/slozano95/pruebas_semana5/tree/main/kraken)
+   * [Pruebas Kraken - Version 3.42](https://github.com/slozano95/pruebas_semana5/tree/main/kraken%203.42)
  * [Instrucciones para Ejecucion Reporte Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
  * [Reporte de Referencias Visuales HTML - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/report.html)
  * [Reporte de Referencias Visuales PDF - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/VRT%20Report.pdf)

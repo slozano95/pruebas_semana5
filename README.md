@@ -1,7 +1,7 @@
 ## Instalación Ambiente GHOST para pruebas. ¡ Importante !
 
 * Versión Principal ( 5.22.10 ) - Usada en la semana 5 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
-     "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin"
+     URL: https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin
 * Versión Antigua para Regresión Visual ( 3.42 ) : Esta versión requiere seguir unos pasos de instalación para que las pruebas funcionen correctamente:
      [Pasos de Instalación Version 3.42](https://github.com/slozano95/pruebas_semana5/wiki/Instalaci%C3%B3n-GHOST-Versi%C3%B3n-3.42)
 
@@ -16,16 +16,17 @@
 ## Indice General Semana 6
  * [Versiones de Software Requeridas](https://github.com/slozano95/pruebas_semana5/#versiones-de-software-requeridas)
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
+ * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
+ * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
+ * [10 Escenarios de prueba con la nueva version ghost - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/kraken%203.42/features)
  * [Instrucciones para Ejecucion Reporte Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
  * [Reporte de Referencias Visuales HTML - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/report.html)
- * [Pro y Contra Herramientas de comparacion visuales - Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
- * [Registro de Incidencias Encontrados - ISSUES - Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
- * [Descripción de las funcionalidades de ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
- * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
- * [10 Escenarios de prueba con la nueva version ghost](https://github.com/slozano95/pruebas_semana5/tree/main/kraken/features)
- * [Codigo Reporte comparacion Visual](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Diferecias Visuales]()
- * [Video]()
+ * [Reporte de Referencias Visuales PDF - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/VRT%20Report.pdf)
+ * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
+ * [Pro y Contra Herramientas de comparacion visuales - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
+ * [Codigo Reporte comparacion Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
+ * [Video - Entrega Semana 6]()
+ * [Pro y Contra Herramientas de Testing - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5/wiki#pros-y-contras-de-las-herramientas-para-pruebas-e2e-kraken-vs-cypress)
 
 ## Semana 6
 A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.
@@ -36,9 +37,6 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
  |**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
  |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
  |**CONTRA** No se tiene en cuenta contexto alguno|**CONTRA** No se tiene en cuenta contexto alguno|
- 
-## Pros y Contras
-[Wiki](https://github.com/slozano95/pruebas_semana5/wiki)
 
 # Versiones de Software Requeridas
 - Ghost: 3.42 y 5.22.10
@@ -54,18 +52,18 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 
 # Estructura del proyecto
 ## Monkey-Cypress
--monkey-cypress /cypress/e2e/monkey (Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
+-monkey-cypress /cypress/e2e/monkey _(Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)_
 
 ## Kraken
-- kraken/features (Contine los features correspondientes a las version 5.22.10)
-- kraken 3.42/features (Contine los features correspondientes a las version 3.42 )
+- kraken/features _(Contine los features correspondientes a las version 5.22.10)_
+- kraken 3.42/features _(Contine los features correspondientes a las version 3.42 )_
 
 ## Screenshots
-- Screenshots/Version 5.22.10 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10).
-- Screenshots/Version 3.42 (Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42).
+- Screenshots/Version 5.22.10 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10)._
+- Screenshots/Version 3.42 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42)._
 
 ## TestResemble
-- TestResemble/results/2022-11-20T22.02.16.475Z/report.html (Reporte de la comparación de pantallazos).
+- TestResemble/results/2022-11-20T22.02.16.475Z/report.html _(Reporte de la comparación de pantallazos)._
 
 # Funcionalidades Bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.

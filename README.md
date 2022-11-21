@@ -225,27 +225,31 @@ A continuación presentamos una tabla que muestra algunas pros y contras de las 
 
 ## Kraken
 ### 1. Escenarios Post
- * [Crear un nuevo post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_post.feature)
- * [Editar un post](https://github.com/slozano95/pruebas_semana5/blob/main/monkey-cypress/cypress/e2e/monkey/ghost_edit_tag.cy.js)
- * [Eliminar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_delete_post.feature)
- * [Publicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_publish_post.feature)
- * [Despublicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_unpublish_post.feature)
+ * [Crear un nuevo post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/POST_ghost_create.featur)
+ * [Eliminar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/POST_ghost_delete.featur)
+ * [Publicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/POST_ghost_publish.featur)
+ * [Despublicar un post](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/POST_ghost_unpublish.featur)
 
 ### 2. Escenarios Paginas
-* [5 escenarios](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_page.feature)
+ * [Crear pagina datos basicos](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/PAGE_ghost_create_custom_data.featur)
+ * [Crear pagina url personalizada](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/PAGE_ghost_create_custom_url.featur)
+ * [Eliminar Pagina](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/PAGE_ghost_delete.featur)
+ * [Despublicar Pagina](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/PAGE_ghost_unpublish.featur)
+ 
 ### 3. Escenarios Tags
- * [Crear un nuevo tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_tag.feature)
- * [Editar un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_tag.feature)
- * [Eliminar un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_delete_tag.feature)
- * [Editar meta data de un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_meta_data_tag.feature)
- * [Editar tag con un nombre largo](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_tag_long_name.feature)
+ * [Crear un nuevo tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/TAG_ghost_create.featur)
+ * [Editar un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/TAG_ghost_edit.featur)
+ * [Eliminar un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/TAG_ghost_delete.featur)
+ * [Editar meta data de un tag](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/TAG_ghost_edit_meta_data.featur)
+ * [Editar tag con un nombre largo](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/TAG_ghost_edit_long_name.featur)
+ 
 ### 4. Escenarios Miembros
- * [Crear un nuevo Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_MEMBER.feature)
- * [Crear un Miembro Incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_create_incorrect_MEMBER.feature)
- * [Editar un Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_edit_MEMBER.feature)
- * [Eliminar un Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_delete_MEMBER.feature)
+ * [Crear un nuevo Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/MEMBER_ghost_create.featur)
+ * [Crear un Miembro Incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/MEMBER_ghost_create_incorrect.featur)
+ * [Editar un Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/MEMBER_ghost_edit.featur)
+ * [Eliminar un Miembro](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/MEMBER_ghost_delete.featur)
 
 ### 5. Escenarios Login
- * [Usuario incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_user_incorrect.feature)
- * [Password incorrecta](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_login_password_incorrect_R.feature)
- * [Cambiar Contraseña](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/ghost_change_password.feature)
+ * [Usuario incorrecto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/LOGIN_ghost_user_incorrect.featur)
+ * [Password incorrecta](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/LOGIN_ghost_password_incorrect.featur)
+ * [Login Correcto](https://github.com/slozano95/pruebas_semana5/blob/main/kraken/features/LOGIN_ghost.featur)

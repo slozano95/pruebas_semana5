@@ -2,7 +2,8 @@ Feature: Unpublish Page
 
 @user1 @web
 Scenario: Unpublish a page
-Given I navigate to page "<URL>"
+Given I prepare the data pool
+And I navigate to page "<URL>"
 And I wait for 2 seconds
 When I enter email "<EMAIL>" "Version 5.22.10" "Page" "UnpublishPage" "1_IngresarEmail"
 And I wait for 1 seconds

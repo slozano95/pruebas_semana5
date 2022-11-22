@@ -1,9 +1,38 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const assert = require('assert')
-
+const https = require('https');
 // ------------------
 //  Login
 // ------------------
+Given('I prepare the data pool', async function() {
+    let url = "https://api.mockaroo.com/api/0dd16450?count=1&key=94e8ade0";
+    await https.get(url,(res) => {
+        let body = "";
+        res.on("data", (chunk) => {
+            body += chunk;
+        });
+        res.on("end", () => {
+            try {
+                let json = JSON.parse(body);
+                let dataSet = {
+                    "EMAIL": json.user,
+                    "PWD": json.password,
+                    "URL": "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin",
+                    "LONG_NAME_TAG":"solicitantes de empleo que preparan su currículum preparan su currículum preparan su currículum preparan su currículum" 
+                }
+                fs = require('fs');
+                fs.writeFile('properties.json', JSON.stringify(dataSet), function (err) {
+                    if (err) return console.log(err);
+                });
+            } catch (error) {
+                console.error(error.message);
+            };
+        });
+    }).on("error", (error) => {
+        console.error(error.message);
+        return false;
+    });
+});
 
 When('I enter email {kraken-string} {kraken-string} {kraken-string} {kraken-string} {kraken-string}', async function (email, version, feature, escenario, name) {
     let element = await this.driver.$("input[name='identification']");

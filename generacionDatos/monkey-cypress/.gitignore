@@ -1,0 +1,3 @@
+cypress/integration/monkey/node_modules/
+cypress/videos
+node_modules/

@@ -1,7 +1,7 @@
-import { DataPool } from "./_datapool";
+import { DataPool, PoolOrigin } from "./_datapool";
 import {login, waitSeconds, clickOnButton, clickOnRawButton, clickOnLink} from './_shared_slr';
 require('cypress-plugin-tab');
-var faker = require('faker');
+const faker = require('faker');
 
 var feature = "";
 var functionality = "Page";
@@ -23,18 +23,31 @@ Cypress.on('uncaught:exception', (err)=>{
 
 describe( `Ghost is under smarter monkeys`, function() {
     
-    beforeEach(async () => {
-        // await DataPool.prepare(mockarooUrl);
-        try {
-            await DataPool.prepare(mockarooUrl);
-        } catch(e) {
-            cy.log(e);
-            return false;
-        }
+    beforeEach(() => {
+        ////EXAMPLE PSEUDO
+        // try {
+        //     // await DataPool.prepare(PoolOrigin.APriori, mockarooUrl);
+            
+        //     await DataPool.prepare(PoolOrigin.APriori, "./mocks/31.json");
+        // } catch(e) {
+        //     cy.log(e);
+        //     return true;
+        // }
+
+        ////EXAMPLE APRIORI
+        // cy.readFile('./mocks/31.json').then((fileData) => {
+        //     DataPool.prepare(PoolOrigin.APriori, fileData);
+        // })
+        
+        ////EXAMPLE RANDOM
+        cy.readFile('./mock_structs/31.json').then((fileData) => {
+            DataPool.prepare(PoolOrigin.Random, fileData);
+        })
     });
     it(`Creates a new page`, function() { 
         feature = "Create_page"
         count = 0;
+
         cy.visit(url).then((win)=>{  
             login(username, pwd);
             waitSeconds(1);

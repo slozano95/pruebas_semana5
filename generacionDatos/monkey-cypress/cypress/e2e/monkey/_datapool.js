@@ -1,11 +1,42 @@
 const https = require('https');
 const http = require('http');
+const fs = require('fs');
+const faker = require('faker');
 
+
+export const PoolOrigin = {
+	APriori: 0,
+	Pseudo: 1,
+	Random: 2
+}
 export class DataPool {
     static data = []
     static iterator = -1;
 
-    static async prepare(url) {
+    static async prepare(origin, payload,f) {
+        switch (origin) {
+            case PoolOrigin.APriori:
+                return this.prepareAPrioriOrigin(payload)
+                break;
+            case PoolOrigin.Pseudo:
+                return this.preparePseudoOrigin(payload)
+                break;
+            case PoolOrigin.Random:
+                return this.prepareRandomOrigin(payload)
+                break;
+        }
+    }
+    
+    static async prepareAPrioriOrigin(fileContent) {
+        let json = JSON.parse(JSON.stringify(fileContent));
+        json.forEach(element => {
+            this.data.push(element);
+        });
+        cy.log("APRIORI DATAPOOL READY TO USE");
+        cy.log("Fields available: "+JSON.stringify(this.data[0]));
+    }
+
+    static async preparePseudoOrigin(url) {
         return new Promise((resolve, reject) => {
             https.get(url, (res) => {
                 let body = "";
@@ -18,7 +49,7 @@ export class DataPool {
                         json.forEach(element => {
                             this.data.push(element);
                         });
-                        cy.log("DATAPOOL READY TO USE");
+                        cy.log("PSEUDO DATAPOOL READY TO USE");
                         cy.log("Fields available: "+JSON.stringify(this.data[0]));
                         resolve()
                     } catch (error) {
@@ -31,6 +62,34 @@ export class DataPool {
                 reject("2"+error)
             });
         });
+    }
+
+    static async prepareRandomOrigin(basicStruct, f) {
+        let json = JSON.parse(JSON.stringify(basicStruct));
+        json.forEach(element => {
+            var data = {}
+            Object.entries(element).forEach(entry => {
+                const [key, dataType] = entry;
+                var components= dataType.split("_");
+                var size = components[1] ?? 10;
+                var randomData = "";
+                switch(components[0]) {
+                    case "string":
+                        randomData = faker.random.alphaNumeric(size)
+                        break;
+                    case "integer":
+                        randomData = faker.random.number(size)
+                        break;
+                    default: 
+                        randomData = dataType
+                        break;
+                }
+                data[key] = randomData;
+            });
+            this.data.push(data);
+        });
+        cy.log("RANDOM DATAPOOL READY TO USE");
+        cy.log("Fields available: "+JSON.stringify(this.data[0]));
     }
 
     static get(fieldName) {

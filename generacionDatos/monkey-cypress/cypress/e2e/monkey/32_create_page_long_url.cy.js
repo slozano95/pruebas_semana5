@@ -10,8 +10,7 @@ var escenario = "Page";
 var version = "5.22.10";
 var pool = {};
 const url = "http://localhost:2368/ghost/"
-var mockarooUrl = "https://api.mockaroo.com/api/ee85b900?count=100&key=94e8ade0";
-// var mockarooUrl = "http://127.0.0.1:8888/mock_1.json";
+var mockarooUrl = "https://api.mockaroo.com/api/bc053910?count=1&key=94e8ade0";
 const username = "slozano95@gmail.com";
 const pwd = "hola123456";
 
@@ -21,8 +20,7 @@ Cypress.on('uncaught:exception', (err)=>{
     return false
 });
 
-describe( `Ghost is under smarter monkeys`, function() {
-    
+describe(`Ghost is under smarter monkeys`, function() {
     beforeEach(async () => {
         // await DataPool.prepare(mockarooUrl);
         try {
@@ -32,8 +30,8 @@ describe( `Ghost is under smarter monkeys`, function() {
             return false;
         }
     });
-    it(`Creates a new page`, function() { 
-        feature = "Create_page"
+    //TODO reportar error con caracteres １２ no cuenta
+    it(`Creates a new page with huge title`, function() { 
         count = 0;
         cy.visit(url).then((win)=>{  
             login(username, pwd);
@@ -43,14 +41,14 @@ describe( `Ghost is under smarter monkeys`, function() {
             waitSeconds(1);
             cy.focused().type(DataPool.get("title"))
             waitSeconds(1);
-            cy.focused().type("{enter}")
+            cy.focused().tab().focus()
             waitSeconds(1);
             cy.focused().type(DataPool.get("body"))
             clickOnButton("Publish");
             clickOnButton("Continue");
             clickOnButton("Publish page");
             waitSeconds(1);
-            cy.contains("Boom")
+            cy.contains("Publish").should('not.exist')
         })
         cy.wait(1000)
     })

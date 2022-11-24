@@ -9,10 +9,10 @@ var count = 1;
 var escenario = "Page";
 var version = "5.22.10";
 var pool = {};
-const url = "http://localhost:2368/ghost/"
 var mockarooUrl = "https://api.mockaroo.com/api/bc053910?count=1&key=94e8ade0";
-const username = "slozano95@gmail.com";
-const pwd = "hola123456";
+const url = Cypress.config('baseUrl') || "http://localhost:2368/ghost/"
+const username = Cypress.config('username') || "slozano95@gmail.com";
+const pwd = Cypress.config('password') || "hola123456";
 
 Cypress.on('uncaught:exception', (err)=>{
     cy.task('logCommand', {'message':`An exception occurred: ${err.message}`})
@@ -22,12 +22,10 @@ Cypress.on('uncaught:exception', (err)=>{
 
 describe(`Ghost is under smarter monkeys`, function() {
     beforeEach(async () => {
-        // await DataPool.prepare(mockarooUrl);
         try {
-            await DataPool.prepare(mockarooUrl);
+            await DataPool.prepare(PoolOrigin.Pseudo, mockarooUrl);
         } catch(e) {
-            cy.log(e);
-            return false;
+            return true;
         }
     });
     //TODO reportar error con caracteres １２ no cuenta

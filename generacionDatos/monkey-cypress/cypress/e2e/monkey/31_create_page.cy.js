@@ -9,11 +9,10 @@ var count = 1;
 var escenario = "Page";
 var version = "5.22.10";
 var pool = {};
-const url = "http://localhost:2368/ghost/"
 var mockarooUrl = "https://api.mockaroo.com/api/ee85b900?count=100&key=94e8ade0";
-// var mockarooUrl = "http://127.0.0.1:8888/mock_1.json";
-const username = "slozano95@gmail.com";
-const pwd = "hola123456";
+const url = Cypress.config('baseUrl') || "http://localhost:2368/ghost/"
+const username = Cypress.config('username') || "slozano95@gmail.com";
+const pwd = Cypress.config('password') || "hola123456";
 
 Cypress.on('uncaught:exception', (err)=>{
     cy.task('logCommand', {'message':`An exception occurred: ${err.message}`})
@@ -27,7 +26,6 @@ describe(`Ghost is under smarter monkeys`, function() {
         try {
             await DataPool.prepare(PoolOrigin.Pseudo, mockarooUrl);
         } catch(e) {
-            cy.log(e);
             return true;
         }
     });

@@ -44,7 +44,6 @@ export class DataPool {
     // try {
     //     await DataPool.prepare(PoolOrigin.Pseudo, mockarooUrl);
     // } catch(e) {
-    //     cy.log(e);
     //     return true;
     // }
     static async preparePseudoOrigin(url) {

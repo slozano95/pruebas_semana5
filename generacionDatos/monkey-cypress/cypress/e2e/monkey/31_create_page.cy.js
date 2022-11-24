@@ -21,28 +21,15 @@ Cypress.on('uncaught:exception', (err)=>{
     return false
 });
 
-describe( `Ghost is under smarter monkeys`, function() {
+describe(`Ghost is under smarter monkeys`, function() {
     
-    beforeEach(() => {
-        ////EXAMPLE PSEUDO
-        // try {
-        //     // await DataPool.prepare(PoolOrigin.APriori, mockarooUrl);
-            
-        //     await DataPool.prepare(PoolOrigin.APriori, "./mocks/31.json");
-        // } catch(e) {
-        //     cy.log(e);
-        //     return true;
-        // }
-
-        ////EXAMPLE APRIORI
-        // cy.readFile('./mocks/31.json').then((fileData) => {
-        //     DataPool.prepare(PoolOrigin.APriori, fileData);
-        // })
-        
-        ////EXAMPLE RANDOM
-        cy.readFile('./mock_structs/31.json').then((fileData) => {
-            DataPool.prepare(PoolOrigin.Random, fileData);
-        })
+    beforeEach(async () => {
+        try {
+            await DataPool.prepare(PoolOrigin.Pseudo, mockarooUrl);
+        } catch(e) {
+            cy.log(e);
+            return true;
+        }
     });
     it(`Creates a new page`, function() { 
         feature = "Create_page"

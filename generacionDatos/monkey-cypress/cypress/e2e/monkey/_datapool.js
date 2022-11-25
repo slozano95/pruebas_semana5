@@ -94,6 +94,22 @@ export class DataPool {
                     case "integer":
                         randomData = faker.random.number(size)
                         break;
+                    case "wierd":
+                        randomData = faker.datatype.string(size).replaceAll("{", "")
+                        break
+                    case "naughty":
+                            var possible = "(ﾉಥ益ಥ）ﾉ﻿ ┻━┻ １２";
+                            for (var i = 0; i < size; i++)
+                              randomData += possible.charAt(Math.floor(Math.random() * possible.length));
+                        break
+                    case "emoji":
+                        var possible = "😀😃😄😁😆🥹😅😂🤣🥲🙃🙂😇☺️😊";
+                        for (var i = 0; i < size; i++)
+                            randomData += possible.charAt(Math.floor(Math.random() * possible.length));
+                    break
+                    case "url":
+                        randomData = faker.internet.url()
+                        break
                     default: 
                         randomData = dataType
                         break;

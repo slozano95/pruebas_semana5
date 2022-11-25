@@ -35,11 +35,9 @@ describe(`Ghost is under smarter monkeys`, function() {
             waitSeconds(1);
             cy.get('.post-setting-slug').clear({force: true});
             cy.get('.post-setting-slug').type(DataPool.get("url"), {force: true});
-            clickOnButton("Publish");
-            clickOnButton("Continue");
-            clickOnButton("Publish page");
+            cy.get('body').tab()
             waitSeconds(1);
-            cy.contains("Error")
+            cy.contains("/post-")
         })
         cy.wait(1000)
     })

@@ -5,7 +5,6 @@ require('cypress-plugin-tab');
 const url = Cypress.config('baseUrl') || "http://localhost:2368/ghost/"
 const username = Cypress.config('username') || "slozano95@gmail.com";
 const pwd = Cypress.config('password') || "hola123456";
-var mockarooUrl = "https://api.mockaroo.com/api/a26e4ff0?count=100&key=94e8ade0";
 
 Cypress.on('uncaught:exception', (err)=>{
     cy.task('logCommand', {'message':`An exception occurred: ${err.message}`})
@@ -14,12 +13,10 @@ Cypress.on('uncaught:exception', (err)=>{
 });
 
 describe(`Ghost is under smarter monkeys`, function() {
-    beforeEach(async () => {
-        try {
-            await DataPool.prepare(PoolOrigin.Pseudo, mockarooUrl);
-        } catch(e) {
-            return false;
-        }
+    beforeEach(() => {
+        cy.readFile('./mock_structs/55.json').then((fileData) => {
+            DataPool.prepare(PoolOrigin.Random, fileData);
+        })
     });
     
     it('Creates page with custom url and special chars', function() { 
@@ -40,7 +37,7 @@ describe(`Ghost is under smarter monkeys`, function() {
             cy.get('.post-setting-slug').type(DataPool.get("url"), {force: true});
             cy.get('body').tab()
             waitSeconds(1);
-            cy.contains("/post-")
+            cy.contains("error")
         })
         cy.wait(1000)
     })

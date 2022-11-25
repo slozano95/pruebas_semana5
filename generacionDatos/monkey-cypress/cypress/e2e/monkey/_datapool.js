@@ -26,7 +26,11 @@ export class DataPool {
                 break;
         }
     }
-    
+
+    ////EXAMPLE APRIORI
+    // cy.readFile('./mocks/31.json').then((fileData) => {
+    //     DataPool.prepare(PoolOrigin.APriori, fileData);
+    // })
     static async prepareAPrioriOrigin(fileContent) {
         let json = JSON.parse(JSON.stringify(fileContent));
         json.forEach(element => {
@@ -36,6 +40,12 @@ export class DataPool {
         cy.log("Fields available: "+JSON.stringify(this.data[0]));
     }
 
+    ////EXAMPLE PSEUDO
+    // try {
+    //     await DataPool.prepare(PoolOrigin.Pseudo, mockarooUrl);
+    // } catch(e) {
+    //     return true;
+    // }
     static async preparePseudoOrigin(url) {
         return new Promise((resolve, reject) => {
             https.get(url, (res) => {
@@ -64,6 +74,10 @@ export class DataPool {
         });
     }
 
+    ////EXAMPLE RANDOM
+    // cy.readFile('./mock_structs/31.json').then((fileData) => {
+    //     DataPool.prepare(PoolOrigin.Random, fileData);
+    // })
     static async prepareRandomOrigin(basicStruct, f) {
         let json = JSON.parse(JSON.stringify(basicStruct));
         json.forEach(element => {

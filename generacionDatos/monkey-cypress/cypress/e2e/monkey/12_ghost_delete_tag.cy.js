@@ -78,7 +78,7 @@ describe('new tag ghost', () => {
       
       cy.wait(1000);
       //cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).click()     
-      cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').should('not.exist')   
+      cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).  should('not.exist')   
       ss("Tag")
 
       cy.wait(1000);

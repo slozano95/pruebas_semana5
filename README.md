@@ -2,18 +2,16 @@
 
 * Versión Principal ( 5.22.10 ) - Usada en la semana 5 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
      URL: https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin
-* Versión Antigua para Regresión Visual ( 3.42 ) : Esta versión requiere seguir unos pasos de instalación para que las pruebas funcionen correctamente:
-     [Pasos de Instalación Version 3.42](https://github.com/slozano95/pruebas_semana5/wiki/Instalaci%C3%B3n-GHOST-Versi%C3%B3n-3.42)
 
 ## Integrantes del Grupo
 |  Nombres  | Correo  |  
 |---|---|
-| Leidy Beltrán Romero  | richardacevedo98@gmail.com  |
+| Leidy Beltrán Romero  | lt.beltranr1@uniandes.edu.co  |
 | Santiago Lozano R  |  ssa.lozanolo@uniandes.edu.co |
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
-## Indice General Semana 6
+## Indice General Semana 7
  * [Versiones de Software Requeridas](https://github.com/slozano95/pruebas_semana5/#versiones-de-software-requeridas)
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
@@ -33,18 +31,8 @@
  * [Pro y Contra Herramientas de Testing - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5/wiki#pros-y-contras-de-las-herramientas-para-pruebas-e2e-kraken-vs-cypress)
  * [Acceso Scripts de pruebas por herramienta - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5#acceso-script-de-pruebas-por-herramienta)
 
-## Semana 6
-A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.
-|  ResembleJS | BackStopJS |
-| ------------ | ------------ |
- |  **PRO** Facilidad de generar reportes, los genera en formato estandar HTML | **CONTRA** Implementación más larga
- | **PRO** Utilización de escenarios | **CONTRA** No los incluye por defecto |
- |**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
- |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
- |**CONTRA** No se tiene en cuenta contexto alguno|**CONTRA** No se tiene en cuenta contexto alguno|
-
 # Versiones de Software Requeridas
-- Ghost: 3.42 y 5.22.10
+- Ghost: 5.22.10
 - Playwright: 1.27.1
 - Resemblejs: 4.1.0
 - Node: 14.20.1

@@ -91,6 +91,9 @@ export class DataPool {
                     case "string":
                         randomData = faker.random.alphaNumeric(size)
                         break;
+                    case "email":
+                        randomData = faker.internet.email()
+                        break;
                     case "integer":
                         randomData = faker.random.number(size)
                         break;

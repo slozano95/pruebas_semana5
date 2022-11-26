@@ -16,19 +16,8 @@
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
- * [10 Escenarios de prueba con la nueva version ghost - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/kraken%203.42/features)
- * [Pruebas Cypress](https://github.com/slozano95/pruebas_semana5/tree/main/monkey-cypress)
- * Pruebas Kraken
-   * [Pruebas Kraken - Version 5.22.10](https://github.com/slozano95/pruebas_semana5/tree/main/kraken)
-   * [Pruebas Kraken - Version 3.42](https://github.com/slozano95/pruebas_semana5/tree/main/kraken%203.42)
- * [Instrucciones para Ejecucion Reporte Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
- * [Reporte de Referencias Visuales HTML - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/report.html)
- * [Reporte de Referencias Visuales PDF - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/VRT%20Report.pdf)
+ * [Descripción de cómo los 120 escenarios son generados]
  * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
- * [Pro y Contra Herramientas de comparacion visuales - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
- * [Codigo Reporte comparacion Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Video - Entrega Semana 6](https://drive.google.com/file/d/1nWnMa3grD08jyNpva_FqSyl-dDvuSdUI/view?usp=sharing)
- * [Pro y Contra Herramientas de Testing - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5/wiki#pros-y-contras-de-las-herramientas-para-pruebas-e2e-kraken-vs-cypress)
  * [Acceso Scripts de pruebas por herramienta - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5#acceso-script-de-pruebas-por-herramienta)
 
 # Versiones de Software Requeridas
@@ -45,18 +34,8 @@
 
 # Estructura del proyecto
 ## Monkey-Cypress
--monkey-cypress /cypress/e2e/monkey _(Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)_
-
-## Kraken
-- kraken/features _(Contine los features correspondientes a las version 5.22.10)_
-- kraken 3.42/features _(Contine los features correspondientes a las version 3.42 )_
-
-## Screenshots
-- Screenshots/Version 5.22.10 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10)._
-- Screenshots/Version 3.42 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42)._
-
-## TestResemble
-- TestResemble/results/2022-11-20T22.02.16.475Z/report.html _(Reporte de la comparación de pantallazos)._
+*GeneracionDatos-monkey-cypress/cypress/e2e/monkey _(Se encuentran los 120 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)_
+*GeneracionDatos/monkey-cypress/mocks/ (se encuentra los Json Generados por Api Mockaroo)
 
 # Funcionalidades Bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.

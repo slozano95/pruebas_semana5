@@ -14,11 +14,11 @@
 ## Indice General Semana 7
  * [Versiones de Software Requeridas](https://github.com/slozano95/pruebas_semana5/#versiones-de-software-requeridas)
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
- * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/mocks)
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
+  * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/mocks)
  * [Descripción de cómo los 120 escenarios son generados]
- * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
+ * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/issues)
  * [Acceso Scripts de pruebas por herramienta - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5#acceso-script-de-pruebas-por-herramienta)
 
 # Versiones de Software Requeridas
@@ -35,7 +35,7 @@
 
 # Estructura del proyecto
 ## Monkey-Cypress
-* GeneracionDatos-monkey-cypress/cypress/e2e/monkey (Se encuentran los 120 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)_
+* GeneracionDatos-monkey-cypress/cypress/e2e/monkey (Se encuentran los 120 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
 * GeneracionDatos/monkey-cypress/mocks/ (se encuentra los Json Generados por Api Mockaroo)
 
 # Funcionalidades Bajo pruebas

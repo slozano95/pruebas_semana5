@@ -16,8 +16,9 @@
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
-  * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/mocks)
+ * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/mocks)
  * [Descripción de cómo los 120 escenarios son generados]
+ * [Reporte de los 120 escenarios generados](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos)
  * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/issues)
  * [Acceso Scripts de pruebas por herramienta - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5#acceso-script-de-pruebas-por-herramienta)
 

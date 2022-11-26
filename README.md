@@ -16,7 +16,7 @@
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
- * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/mocks)
+ * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/cypress/e2e/monkey)
  * [Descripción de cómo los 120 escenarios son generados]
  * [Reporte de los 120 escenarios generados](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos)
  * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/issues)
@@ -35,7 +35,7 @@
 
 # Estructura del proyecto
 ## Monkey-Cypress
-* GeneracionDatos-monkey-cypress/cypress/e2e/monkey (Se encuentran los 120 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)
+* GeneracionDatos-monkey-cypress/cypress/e2e/monkey (Se encuentran los 120 escenarios de pruebas)
 * GeneracionDatos/monkey-cypress/mocks/ (se encuentra los Json Generados por Api Mockaroo)
 
 # Funcionalidades Bajo pruebas

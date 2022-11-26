@@ -23,15 +23,14 @@
 
 # Versiones de Software Requeridas
 - Ghost: 5.22.10
-- Playwright: 1.27.1
-- Resemblejs: 4.1.0
+- Faker: 5.50
 - Node: 14.20.1
 - npm: 6.14.17
 - xpath: ^2.0.1
-- Kraken-Node: 1.0.24
 - Cypress: ^11.0.1
 - Google Chrome: 107.0.5304.107 64 bits
 - Windows: Windows 10 64 bits
+
 
 # Estructura del proyecto
 ## Monkey-Cypress

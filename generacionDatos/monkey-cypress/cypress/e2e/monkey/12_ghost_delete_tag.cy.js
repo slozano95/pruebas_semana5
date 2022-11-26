@@ -11,6 +11,8 @@ context('Delete tag with common data', () => {
     slugTag = faker.random.alpha(5);
     descriptionTag = faker.random.alpha(100);
   })
+ 
+  
 describe('new tag ghost', () => {
 
   var feature = "";
@@ -65,24 +67,18 @@ describe('new tag ghost', () => {
       ss("TagValidacion")
 
       cy.wait(1000);
-      cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).click()     
+      cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).click()
+      
       ss("Tag")
 
       cy.wait(1000);
       cy.get('button>span').contains("Delete tag").click()
-      ss("DeleteTag")
+      //ss("DeleteTag")
 
-      cy.wait(1000);
-      cy.get('div[class="modal-footer"] > button > span').contains('Delete').click()
-      ss("Delete")
+      cy.wait(1000);  
+      cy.get('div[class="modal-footer"] > button > span').contains("Delete").click();
+    
       
-      cy.wait(1000);
-      //cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).click()     
-      cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).should('not.exist')   
-      ss("Tag")
-
-      cy.wait(1000);
-
     })
   }) 
 })

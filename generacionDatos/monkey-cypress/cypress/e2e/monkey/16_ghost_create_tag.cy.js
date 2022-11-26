@@ -34,8 +34,7 @@ context('Create tag with common data', () => {
   describe('Create new tag ghost', () => {
     
     it('Login', () => {
-      cy.visit(url)
-      
+      cy.visit(url)      
       login(username, pwd);      
       ss("login")
       

@@ -1,15 +1,24 @@
 /// <reference types="cypress" />
 var faker = require('faker');
+import { DataPool, PoolOrigin } from "./_datapool";
+import {login, waitSeconds, clickOnButton, clickOnRawButton, clickOnLink} from './_shared_slr';
 
-let nombreTag="                                                                                                                 ";
-let slugTag="                                                                                                                   ";
-let descriptionTag="                                                                                                            ";
+const url = Cypress.config('baseUrl') || "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin"
+const username = Cypress.config('username') || "richardacevedo98@gmail.com";
+const pwd = Cypress.config('password') || "0123456789";
+
+let nombreTag="";                                                                
+let slugTag="";                           
+let descriptionTag="";                                     
 context('Create tag with common data', () => {
   beforeEach(() => {        
     cy.wait(1000);
     // nombreTag = faker.random.word();                
     // slugTag = faker.random.word();
     // descriptionTag = faker.lorem.lines(1);
+    cy.readFile('./mocks/15.json').then((fileData) => {
+      DataPool.prepare(PoolOrigin.APriori, fileData);
+  }) 
   })
 
 
@@ -28,14 +37,8 @@ context('Create tag with common data', () => {
   describe('Create new tag ghost', () => {
     
     it('Login', () => {
-      cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
-      
-      cy.get('form').within(() => {
-          cy.get('input[name="identification"]').type('richardacevedo98@gmail.com')
-          cy.get('input[name="password"]').type('0123456789')
-          cy.get('button[type="submit"]').click()                    
-      }) 
-      
+      cy.visit(url)      
+      login(username, pwd);      
       ss("login")
       
       cy.get('a[href*="#/tags/"]').click()
@@ -45,17 +48,17 @@ context('Create tag with common data', () => {
         
       cy.wait(1000);
       cy.get('#tag-name')
-        .type(nombreTag)        
+        .type(DataPool.get("nombreTag"))        
       ss("TagValue")
 
       cy.wait(1000);
       cy.get('#tag-slug').clear();
       cy.get('#tag-slug')
-      .type(slugTag)      
+      .type(DataPool.get("slugTag"))      
       ss("TagValueSlug")
 
       cy.get('#tag-description')
-      .type(descriptionTag)      
+      .type(DataPool.get("descriptionTag"))      
       ss("Descripcion")
       cy.get('button>span').contains("Save").click()
       ss("Save")

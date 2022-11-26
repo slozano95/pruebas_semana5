@@ -1,5 +1,10 @@
 /// <reference types="cypress" />
 var faker = require('faker');
+import {login, waitSeconds, clickOnButton, clickOnRawButton, clickOnLink} from './_shared_slr';
+
+const url = Cypress.config('baseUrl') || "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin"
+const username = Cypress.config('username') || "richardacevedo98@gmail.com";
+const pwd = Cypress.config('password') || "0123456789";
 
 let nombreTag="";
 let slugTag="";
@@ -28,14 +33,8 @@ context('Create tag with common data', () => {
   describe('Create new tag ghost', () => {
     
     it('Login', () => {
-      cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
-      
-      cy.get('form').within(() => {
-          cy.get('input[name="identification"]').type('richardacevedo98@gmail.com')
-          cy.get('input[name="password"]').type('0123456789')
-          cy.get('button[type="submit"]').click()                    
-      }) 
-      
+      cy.visit(url)      
+      login(username, pwd);      
       ss("login")
       
       cy.get('a[href*="#/tags/"]').click()

@@ -78,15 +78,8 @@ describe('new tag ghost', () => {
       ss("DeleteTag")
 
       cy.wait(1000);
-      cy.get('div[class="modal-footer"] > button > span').contains('Delete').click()
-      ss("Delete")
+      cy.get('div[class="modal-footer"] > button > span').contains('Delete').click();
       
-      cy.wait(1000);
-      //cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).click()     
-      //cy.get('a[href*="#/tags/'+slugTag+'/"] > h3').contains(nombreTag).should('not.exist')   
-      ss("Tag")
-
-      cy.wait(1000);
 
     })
   }) 

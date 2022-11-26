@@ -9,16 +9,16 @@ function randomDescription() {
     return faker.random.words(5);
 }
 
-describe('Testing Publica Post Hora aleatoria', () => {
+describe('Testing Publica Post fecha actual', () => {
 beforeEach(()=>{ 
     cy.wait(2000)
 })
 
 var title = randomString();
 var Description = randomDescription();
-var hour = faker.random.hour;
+var date = faker.random.date;
         
-it('Publica Post Hora aleatoria', () => {
+it('Publica Post fecha actual', () => {
     cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
     
     cy.get('form').within(() => {
@@ -53,10 +53,10 @@ it('Publica Post Hora aleatoria', () => {
     cy.get('button[title="Settings"]').click();
     cy.wait(20) 
  
-    cy.get('input[type="text"]');
+    cy.get('input[placeholder="YYYY-MM-DD"]');
     cy.wait(20)
 
-    cy.focused().type('hour');
+    cy.focused().type('date');
     cy.wait(20)
 
     cy.get('button[title="Settings"]').click();

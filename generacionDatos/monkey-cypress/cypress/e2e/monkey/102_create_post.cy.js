@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import {clickOnButton} from './_shared_slr';
 var faker = require('faker');
 
 function randomString() {
@@ -6,9 +7,10 @@ function randomString() {
 }
 
 function randomDescription() {
-    return faker.random.words(191);
+    return faker.random.words(2);
 }
-describe('Testing Create Post Descripcion excede limite de tamaño', () => {
+
+describe('Testing Create Post meta data', () => {
 beforeEach(()=>{
     cy.wait(2000)
 })
@@ -16,7 +18,8 @@ beforeEach(()=>{
 var title = randomString();
 var Description = randomDescription();
 
-it('Login', () => {
+it('Testing Create Post', () => {
+    //Login 
     cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
     
     cy.get('form').within(() => {
@@ -38,17 +41,30 @@ it('Login', () => {
     cy.focused().type(title);
     cy.wait(1)
     
-    cy.focused().type("{enter}");
+    cy.focused().type("{enter}") 
     cy.wait(1)
 
     cy.get('div[data-placeholder= "Begin writing your post..."]');
     cy.wait(1)   
 
-    cy.focused().type(randomDescription());
+    cy.focused().type(Description);
     cy.wait(1)
            
+    cy.get('button[title="Settings"]').click();
+    cy.wait(20);
+
+    clickOnButton("Extra");
+    cy.get('.post-setting-meta-description').type(Description)
+    cy.wait(220);
+
+    cy.focused().type("{enter}") 
+    cy.wait(20)
+
+    cy.get('button[title="Settings"]').click();
+    cy.wait(20);
+
     cy.get('a[href*= "#/posts/"]').contains('Posts').click();   
-    cy.wait(1)
+    cy.wait(100)
 })
 
 })

@@ -40,14 +40,17 @@
         cy.focused().type(title);
         cy.wait(1)
 
+        cy.focused().type("{enter}") 
+        cy.wait(1)
+        
         cy.get('div[data-placeholder= "Begin writing your post..."]');
         cy.wait(1)
 
         cy.focused().type(Description);
-        cy.wait(2000)
+        cy.wait(20)
                       
         cy.get('button[type="button"]').contains('Publish').click()
-        cy.wait(2000)
+        cy.wait(20)
 
         cy.get('button[type="button"]').contains('Continue, final review →').click()
         cy.wait(1)

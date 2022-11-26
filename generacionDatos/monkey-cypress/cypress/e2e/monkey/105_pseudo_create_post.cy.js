@@ -1,23 +1,19 @@
-import { DataPool } from "./_datapool";
+/// <reference types="cypress" />
+import { DataPool,PoolOrigin} from "./_datapool";
 import {
     login,
-    waitSeconds,
-    clickOnButton,
-    clickOnRawButton,
-    clickOnLink,
 } from "./_shared_slr";
 require("cypress-plugin-tab");
 var faker = require("faker");
 
 var feature = "";
-var functionality = "Page";
+var functionality = "Post";
 var count = 1;
-var escenario = "Page";
+var escenario = "Post";
 var version = "5.22.10";
 var pool = {};
 const url = "https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin";
-var mockarooUrl =
-    "https://my.api.mockaroo.com/schema_post.json?key=06be2f50";
+var mockarooUrl = "https://my.api.mockaroo.com/schema_post_description_large.json?key=06be2f50";
 const username = "richardacevedo98@gmail.com";
 const pwd = "0123456789";
 
@@ -31,9 +27,8 @@ Cypress.on("uncaught:exception", (err) => {
 
 describe("Testing Create Post", () => {
     beforeEach(async () => {
-        // await DataPool.prepare(mockarooUrl);
         try {
-            await DataPool.prepare(mockarooUrl);
+            await DataPool.prepare(PoolOrigin.Pseudo, mockarooUrl);
         } catch (e) {
             cy.log(e);
             return false;

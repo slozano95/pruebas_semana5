@@ -46,7 +46,7 @@ describe('Testing Create Post', () => {
         cy.get('div[data-placeholder= "Begin writing your post..."]');
         cy.wait(1)   
 
-        cy.focused().type(randomDescription());
+        cy.focused().type(Description);
         cy.wait(1)
                
         cy.get('a[href*= "#/posts/"]').contains('Posts').click();   

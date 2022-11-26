@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import {clickOnButton} from './_shared_slr';
 var faker = require('faker');
 
 function randomString() {
@@ -6,64 +7,69 @@ function randomString() {
 }
 
 function randomDescription() {
-    return faker.random.words(5);
+    return faker.random.words(2);
 }
 
-describe('Testing Publica Post Hora aleatoria', () => {
-beforeEach(()=>{ 
+function randomUrl() {
+    return faker.internet.url();
+}
+
+describe('Crear post con metadata url personalizada', () => {
+beforeEach(()=>{
     cy.wait(2000)
 })
 
 var title = randomString();
-var Description = randomDescription();
-var hour = faker.random.hour;
-        
-it('Publica Post Hora aleatoria', () => {
+var description = randomDescription();
+var url = randomUrl();
+
+it('Testing Create Post', () => {
+    //Login 
     cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
     
     cy.get('form').within(() => {
         cy.get('input[name="identification"]').type('richardacevedo98@gmail.com')
         cy.get('input[name="password"]').type('0123456789')
-        cy.get('button[type="submit"]').click()
-                
-    })      
-
+        cy.get('button[type="submit"]').click()       
+    })
+   
     cy.wait(2000)
-    cy.get('a[href*= "#/posts/"]').contains('Posts').click();        
-    cy.wait(1)
-    
+    cy.get('a[href*= "#/posts/"]').contains('Posts').click();       
+    cy.wait(1)     
+
     cy.get('a[href*= "#/editor/post/"]').contains('New post').click();        
     cy.wait(1)
 
-    cy.get('textarea[placeholder= "Post title"]');      
+    cy.get('textarea[placeholder= "Post title"]');  
     cy.wait(1)
 
     cy.focused().type(title);
     cy.wait(1)
-
+    
     cy.focused().type("{enter}") 
     cy.wait(1)
 
     cy.get('div[data-placeholder= "Begin writing your post..."]');
+    cy.wait(1)   
+
+    cy.focused().type(description);
     cy.wait(1)
-
-    cy.focused().type(Description);
-    cy.wait(20)
-                  
+           
     cy.get('button[title="Settings"]').click();
-    cy.wait(20) 
- 
-    cy.get('input[type="text"]');
-    cy.wait(20)
+    cy.wait(20);
 
-    cy.focused().type('hour');
-    cy.wait(20)
+    clickOnButton("Extra");
+    cy.get('.post-setting-canonicalUrl').type(url)
+    cy.wait(20);
 
-    cy.get('button[title="Settings"]').click();
-    cy.wait(1) 
-
-    cy.get('button[type="button"]').contains('Publish').click()
+    cy.focused().type("{enter}") 
     cy.wait(200)
+
+    cy.get('button[title="Settings"]').click();
+    cy.wait(20);
+   
+    cy.get('button[type="button"]').contains('Publish').click()
+    cy.wait(20)
 
     cy.get('button[type="button"]').contains('Continue, final review →').click()
     cy.wait(1)
@@ -72,8 +78,9 @@ it('Publica Post Hora aleatoria', () => {
     cy.wait(1)
 
     cy.get('div[class="gh-publish-cta"]').contains('Publishing & sending').click()
-    cy.wait(1)
- })
+    cy.wait(100)
+  
+})
 
 })
 

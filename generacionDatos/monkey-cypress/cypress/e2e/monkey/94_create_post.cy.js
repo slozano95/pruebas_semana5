@@ -36,9 +36,9 @@ it('Login', () => {
     cy.wait(1)
 
     cy.focused().type(title);
-    cy.wait(1)
+    cy.wait(20)
     
-    cy.focused().type("{enter}") 
+    cy.focused().type("{enter}");
     cy.wait(1)
 
     cy.get('div[data-placeholder= "Begin writing your post..."]');

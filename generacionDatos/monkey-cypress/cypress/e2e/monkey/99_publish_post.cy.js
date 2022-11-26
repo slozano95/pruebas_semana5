@@ -9,16 +9,20 @@ function randomDescription() {
     return faker.random.words(5);
 }
 
-describe('Testing Publica Post Hora aleatoria', () => {
+function randomSumary() {
+    return faker.random.words(9);
+}
+
+describe('Testing Publica Post con destacado', () => {
 beforeEach(()=>{ 
     cy.wait(2000)
 })
 
 var title = randomString();
 var Description = randomDescription();
-var hour = faker.random.hour;
+var sumary= randomSumary();
         
-it('Publica Post Hora aleatoria', () => {
+it('Publica Post', () => {
     cy.visit('https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin')
     
     cy.get('form').within(() => {
@@ -53,17 +57,14 @@ it('Publica Post Hora aleatoria', () => {
     cy.get('button[title="Settings"]').click();
     cy.wait(20) 
  
-    cy.get('input[type="text"]');
+    cy.get('span[class="input-toggle-component"]').click();      
     cy.wait(20)
 
-    cy.focused().type('hour');
-    cy.wait(20)
-
-    cy.get('button[title="Settings"]').click();
-    cy.wait(1) 
+   cy.get('button[title="Settings"]').click();
+    cy.wait(20) 
 
     cy.get('button[type="button"]').contains('Publish').click()
-    cy.wait(200)
+    cy.wait(20)
 
     cy.get('button[type="button"]').contains('Continue, final review →').click()
     cy.wait(1)

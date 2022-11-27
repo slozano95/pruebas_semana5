@@ -13,7 +13,7 @@ export class DataPool {
     static data = []
     static iterator = -1;
 
-    static async prepare(origin, payload,f) {
+    static async prepare(origin, payload) {
         switch (origin) {
             case PoolOrigin.APriori:
                 return this.prepareAPrioriOrigin(payload)

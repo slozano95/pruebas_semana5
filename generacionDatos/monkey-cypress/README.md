@@ -4,7 +4,7 @@ Por favor asegurese de instalar las dependencias requeridas, las puede consultar
 
 Pasos de ejecución de pruebas:
 - Descargue el repositorio con el comando git clone https://github.com/slozano95/pruebas_semana5
-- Navegue en la terminal hasta la carpeta 'monkey-cypress' con el comnando _cd monkey-cypress_
+- Navegue en la terminal hasta la carpeta *'generacionDatos/monkey-cypress'* con el comnando _cd monkey-cypress_
 - Ejecute el comando npm install
 - Verifique que se realizó la instalación de todas las versiones mencionadas previamente
 - Ejecute las pruebas con el siguiente comando: cypress open

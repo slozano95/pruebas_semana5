@@ -16,7 +16,7 @@
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
- * [Como probar en Cypress - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress)
+ * [Como probar artecfactos Cypress para Generación de Datos - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress)
  * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/cypress/e2e/monkey)
  * [Descripción de cómo los 120 escenarios son generados](https://github.com/slozano95/pruebas_semana5/wiki/DataPool)
  * [Reporte de los 120 escenarios generados](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos)

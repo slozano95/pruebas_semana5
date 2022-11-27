@@ -29,6 +29,7 @@
 - Node: 14.20.1
 - npm: 6.14.17
 - xpath: ^2.0.1
+- cypress-log-to-output ^1.0.8
 - Cypress: ^11.0.1
 - Google Chrome: 107.0.5304.107 64 bits
 - Windows: Windows 10 64 bits

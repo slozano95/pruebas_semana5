@@ -19,7 +19,7 @@
  * [Como probar artecfactos Cypress para Generación de Datos - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress)
  * [Artefactos de código que generan los 120 escenarios](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/cypress/e2e/monkey)
  * [Descripción de cómo los 120 escenarios son generados](https://github.com/slozano95/pruebas_semana5/wiki/DataPool)
- * [Reporte de los 120 escenarios generados](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos)
+ * [Reporte de los 120 escenarios generados EXCEL - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos)
  * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/issues)
  * [Acceso Scripts de pruebas por herramienta - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5#acceso-script-de-pruebas-por-herramienta)
 

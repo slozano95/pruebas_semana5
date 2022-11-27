@@ -1,6 +1,6 @@
 ## Instalación Ambiente GHOST para pruebas. ¡ Importante !
 
-* Versión Principal ( 5.22.10 ) - Usada en la semana 5 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
+* Versión Principal ( 5.22.10 ) - Usada en la semana 7 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
      URL: https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin
 
 ## Integrantes del Grupo

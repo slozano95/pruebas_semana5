@@ -1,0 +1,38 @@
+Feature: Create Page with custom url
+
+@user1 @web
+Scenario: Create page with custom url
+Given I navigate to page "<URL>"
+And I wait for 2 seconds
+When I enter email "<EMAIL>" "Version 5.22.10" "Page" "CreatePageCustomURL" "1_IngresarEmail"
+And I wait for 1 seconds
+And I enter password "<PWD>" "Version 5.22.10" "Page" "CreatePageCustomURL" "2_IngresarPassword"
+And I wait for 1 seconds
+And I click sign in "Version 5.22.10" "Page" "CreatePageCustomURL" "3_ClickLogin"
+And I wait for 2 seconds
+
+And I click on the link named "Pages" "Version 5.22.10" "Page" "CreatePageCustomURL" "4_ClickPages"
+And I wait for 1 seconds
+And I click on the link named "New page" "Version 5.22.10" "Page" "CreatePageCustomURL" "5_ClickNewPage"
+And I wait for 1 seconds
+And I type on the keyboard "$string_1" "Version 5.22.10" "Page" "CreatePageCustomURL" "6_ClickIngresarNombre"
+And I wait for 1 seconds
+And I hit the tab key on the keyboard "Version 5.22.10" "Page" "CreatePageCustomURL" "7_ClickTabulador"
+And I wait for 1 seconds
+And I type on the keyboard "$string_2" "Version 5.22.10" "Page" "CreatePageCustomURL" "8_IngresarCuerpoPagina"
+And I wait for 1 seconds
+And I click the button with class ".settings-menu-toggle" "Version 5.22.10" "Page" "CreatePageCustomURL" "9_ClickBotonMenuLateral"
+And I wait for 1 seconds
+And I write "$string_3" on the input "#url" "Version 5.22.10" "Page" "CreatePageCustomURL" "10_IngresarUrl"
+And I wait for 1 seconds
+And I click on the button named "Publish" "Version 5.22.10" "Page" "CreatePageCustomURL" "11_ClickPublish"
+And I wait for 1 seconds
+And I click on the button named "Continue, final review →" "Version 5.22.10" "Page" "CreatePageCustomURL" "12_ClickContinue"
+And I wait for 1 seconds
+And I click on the button named "Publish page, right now" "Version 5.22.10" "Page" "CreatePageCustomURL" "13_ClickPublishPageRightNow"
+And I wait for 1 seconds
+And I click on the button named "Back to editor" "Version 5.22.10" "Page" "CreatePageCustomURL" "14_ClickBackEditor"
+And I wait for 1 seconds
+And I click on the link named "Pages" "Version 5.22.10" "Page" "CreatePageCustomURL" "15_ClickPagesValidacion"
+
+Then I wait for 5 seconds

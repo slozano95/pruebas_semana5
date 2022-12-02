@@ -1,74 +1,44 @@
 ## Instalación Ambiente GHOST para pruebas. ¡ Importante !
 
-* Versión Principal ( 5.22.10 ) - Usada en la semana 5 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
+* Versión Principal ( 5.22.10 ) - Usada en la semana 7 : Esta se encuentra desplegada en un servidor bajo la siguiente dirección:
      URL: https://pruebasautomatizadas.digitalpress.blog/ghost/#/signin
-* Versión Antigua para Regresión Visual ( 3.42 ) : Esta versión requiere seguir unos pasos de instalación para que las pruebas funcionen correctamente:
-     [Pasos de Instalación Version 3.42](https://github.com/slozano95/pruebas_semana5/wiki/Instalaci%C3%B3n-GHOST-Versi%C3%B3n-3.42)
 
 ## Integrantes del Grupo
 |  Nombres  | Correo  |  
 |---|---|
-| Leidy Beltrán Romero  | richardacevedo98@gmail.com  |
+| Leidy Beltrán Romero  | lt.beltranr1@uniandes.edu.co  |
 | Santiago Lozano R  |  ssa.lozanolo@uniandes.edu.co |
 | Richard Alexander Acevedo Ramírez   | r.acevedor@uniandes.edu.co   | 
 | Oscar Arley Sanchez | oa.sanchez2@uniandes.edu.co |
 
-## Indice General Semana 6
+## Indice General Semana 7
  * [Versiones de Software Requeridas](https://github.com/slozano95/pruebas_semana5/#versiones-de-software-requeridas)
  * [Estructura del Proyecto](https://github.com/slozano95/pruebas_semana5/#estructura-del-proyecto)
  * [Descripción de las funcionalidades de Ghost que se incluyen en las pruebas](https://github.com/slozano95/pruebas_semana5/#funcionalidades-bajo-pruebas)
  * [Descripción de Escenarios de Prueba](https://github.com/slozano95/pruebas_semana5/#escenarios-de-pruebas)
- * [10 Escenarios de prueba con la nueva version ghost - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/kraken%203.42/features)
- * [Pruebas Cypress](https://github.com/slozano95/pruebas_semana5/tree/main/monkey-cypress)
- * Pruebas Kraken
-   * [Pruebas Kraken - Version 5.22.10](https://github.com/slozano95/pruebas_semana5/tree/main/kraken)
-   * [Pruebas Kraken - Version 3.42](https://github.com/slozano95/pruebas_semana5/tree/main/kraken%203.42)
- * [Instrucciones para Ejecucion Reporte Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/wiki/Reporte-Comparaci%C3%B3n-Visual)
- * [Reporte de Referencias Visuales HTML - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/report.html)
- * [Reporte de Referencias Visuales PDF - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/TestResemble/results/2022-11-20T22.02.16.475Z/VRT%20Report.pdf)
- * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/issues)
- * [Pro y Contra Herramientas de comparacion visuales - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/blob/main/README.md#semana-6)
- * [Codigo Reporte comparacion Visual - Entrega Semana 6](https://github.com/slozano95/pruebas_semana5/tree/main/TestResemble)
- * [Video - Entrega Semana 6](https://drive.google.com/file/d/1nWnMa3grD08jyNpva_FqSyl-dDvuSdUI/view?usp=sharing)
- * [Pro y Contra Herramientas de Testing - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5/wiki#pros-y-contras-de-las-herramientas-para-pruebas-e2e-kraken-vs-cypress)
+ * [Como probar artecfactos Cypress para Generación de Datos - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress)
+ * [Artefactos de código que generan los 120 escenarios - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/cypress/e2e/monkey)
+ * [Descripción de cómo los 120 escenarios son generados - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/wiki/DataPool)
+ * [Reporte de los 120 escenarios generados EXCEL - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos)
+ * [Registro de Incidencias Encontrados - ISSUES - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/issues)
  * [Acceso Scripts de pruebas por herramienta - Entrega Semana 5](https://github.com/slozano95/pruebas_semana5#acceso-script-de-pruebas-por-herramienta)
 
-## Semana 6
-A continuación presentamos una tabla que muestra algunas pros y contras de las herramientas que se pueden utilizar para realizar regresiones visuales.
-|  ResembleJS | BackStopJS |
-| ------------ | ------------ |
- |  **PRO** Facilidad de generar reportes, los genera en formato estandar HTML | **CONTRA** Implementación más larga
- | **PRO** Utilización de escenarios | **CONTRA** No los incluye por defecto |
- |**CONTRA** Basado en Puppetter, solo utiliza Chrome | **PRO** Permite extensibilidad a navegadores |
- |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |**CONTRA** Comparación visual obtenida a partir de la posición absoluta de los pixeles |
- |**CONTRA** No se tiene en cuenta contexto alguno|**CONTRA** No se tiene en cuenta contexto alguno|
-
 # Versiones de Software Requeridas
-- Ghost: 3.42 y 5.22.10
-- Playwright: 1.27.1
-- Resemblejs: 4.1.0
+- Ghost: 5.22.10
+- Faker: 5.50
 - Node: 14.20.1
 - npm: 6.14.17
 - xpath: ^2.0.1
-- Kraken-Node: 1.0.24
+- cypress-log-to-output ^1.0.8
 - Cypress: ^11.0.1
 - Google Chrome: 107.0.5304.107 64 bits
 - Windows: Windows 10 64 bits
 
+
 # Estructura del proyecto
 ## Monkey-Cypress
--monkey-cypress /cypress/e2e/monkey _(Se encuentran los 20 escenarios de pruebas con los scripts para tomas de screenshots correspondientes)_
-
-## Kraken
-- kraken/features _(Contine los features correspondientes a las version 5.22.10)_
-- kraken 3.42/features _(Contine los features correspondientes a las version 3.42 )_
-
-## Screenshots
-- Screenshots/Version 5.22.10 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 5.22.10)._
-- Screenshots/Version 3.42 _(Contiene las imagenes correspondientes de las funcionalidades y sus diferentes escenarios para la versión 3.42)._
-
-## TestResemble
-- TestResemble/results/2022-11-20T22.02.16.475Z/report.html _(Reporte de la comparación de pantallazos)._
+* GeneracionDatos-monkey-cypress/cypress/e2e/monkey (Se encuentran los 120 escenarios de pruebas)
+* GeneracionDatos/monkey-cypress/mocks/ (se encuentra los Json Generados por Api Mockaroo)
 
 # Funcionalidades Bajo pruebas
 * Funcionalidades Posts : Permite la creación de articulos que pueden ser publicados, editados dentro de la Herramienta.

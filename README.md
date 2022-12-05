@@ -19,6 +19,7 @@
  * [Estrategia de pruebas - Entrega Semana 8](https://github.com/slozano95/pruebas_semana5/blob/main/Documentos/Estrategia%20Pruebas/Estrategia-Pruebas-Presupuesto-Final-Semana%208.pdf)
  * [listado de incidencias encontradas con la estrategia y reportadas en el repositorio - Entrega Semana 8](https://github.com/slozano95/pruebas_semana5/issues?q=)
  * [Inventario de Pruebas Manuales - Entrega Semana 8](https://github.com/slozano95/pruebas_semana5/tree/main/Documentos/Documento%20Pruebas%20Manuales)
+ * [Video Presentacion Final - Entrega Semana 8](https://drive.google.com/file/d/1q-9Hr8uqWTp-e_eT7r3aF4irnTwJouUL/view?usp=sharing)
  * [Como probar artecfactos Cypress para Generación de Datos - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress)
  * [Artefactos de código que generan los 120 escenarios - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/tree/main/generacionDatos/monkey-cypress/cypress/e2e/monkey)
  * [Descripción de cómo los 120 escenarios son generados - Entrega Semana 7](https://github.com/slozano95/pruebas_semana5/wiki/DataPool)
